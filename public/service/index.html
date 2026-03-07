@@ -9,7 +9,7 @@
 
 
 
-<base href="http://localhost:1314/service/">
+<base href="//localhost:1314/service/">
 
 
 
@@ -62,12 +62,12 @@
 
 
 
-<meta property="og:image" content="http://localhost:1314/images/ddj_logo.jpeg" />
+<meta property="og:image" content="//localhost:1314/images/ddj_logo.jpeg" />
 
 
 
 
-<meta name="twitter:image" content="http://localhost:1314/images/ddj_logo.jpeg" />
+<meta name="twitter:image" content="//localhost:1314/images/ddj_logo.jpeg" />
 <meta name="twitter:card"
   content="summary">
 
@@ -95,7 +95,7 @@
 
 
 
-<meta property="og:url" content="http://localhost:1314/service/">
+<meta property="og:url" content="//localhost:1314/service/">
   <meta property="og:site_name" content="Data-Driven Justice">
   <meta property="og:title" content="Our Services">
   <meta property="og:description" content="Comprehensive data and technology solutions for nonprofits and small businesses">
@@ -137,6 +137,45 @@
 
 
 
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+  const links = document.querySelectorAll('a[href*="#"]');
+
+  
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      
+      if (targetElement && targetId.startsWith('#')) {
+        e.preventDefault();
+
+        
+        const navbar = document.querySelector('.navigation');
+        const offset = navbar ? navbar.offsetHeight : 0;
+
+        
+        const targetPosition = targetElement.offsetTop - offset - 20;
+
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+
+        
+        history.pushState(null, null, targetId);
+      }
+    });
+  });
+});
+</script>
 
 
 	
@@ -208,7 +247,7 @@
         <span class="icon-bar"></span>
         </button>
         
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="//localhost:1314/">
           
 
 
@@ -241,7 +280,7 @@ Data-Driven Justice
           
           <li class="nav-item">
             <a class="nav-link " 
-              href="/#about">About</a>
+              href="//localhost:1314/#about">About</a>
           </li>
           
           
@@ -251,7 +290,7 @@ Data-Driven Justice
           
           <li class="nav-item">
             <a class="nav-link " 
-              href="/#service">Services</a>
+              href="//localhost:1314/#service">Services</a>
           </li>
           
           
@@ -261,7 +300,7 @@ Data-Driven Justice
           
           <li class="nav-item">
             <a class="nav-link " 
-              href="/#portfolio">Projects</a>
+              href="//localhost:1314/#portfolio">Projects</a>
           </li>
           
           
