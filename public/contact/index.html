@@ -358,9 +358,65 @@ Data-Driven Justice
 </section>
 
 
-
-
-
+<section class="contact-form">
+  <div class="container">
+    
+    
+    <div class="row">
+      <form method="POST" name="contact_en" action="/message_sent" netlify netlify-honeypot="nhp">
+        <div class="col-md-6 col-sm-12">
+          <div class="block">
+            <div class="form-group">
+              <label for="name" hidden>Your name</label>
+              <input id="name" name="name" type="text" class="form-control" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email" hidden>Your e-mail address</label>
+              <input id="email" name="email" type="email" autocomplete="email" class="form-control" placeholder="Your e-mail address" required>
+            </div>
+            <div class="form-group">
+              <label for="subject" hidden>Subject</label>
+              <input id="subject" name="subject" type="text" class="form-control" placeholder="Subject" required>
+            </div>
+            <div class="form-group-h">
+              <input name="nhp" type="text" class="form-control" placeholder="Are you made of flesh and bone?" style="display:none;">
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="block">
+            <div class="form-group-2">
+              <label for="message" hidden>Message</label>
+              <textarea id="message" name="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+            </div>
+            <button class="btn btn-default" type="submit">Send message</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <div class="contact-box row">
+      <div class="col-md-6 col-sm-12">
+        <div class="block">
+          <h2>Address</h2>
+          <ul class="address-block">
+            
+            <li><i class="fas fa-map-marker-alt"></i><div><strong>Data-Driven Justice</strong>
+Consulting Services
+Remote &amp; On-Site</div></li>
+            <li><i class="fas fa-envelope"></i><span class="cloaked-e-mail" data-user="49nietsnrebnad" data-domain="moc.liamg"></span></li>
+            
+          </ul>
+          <ul class="social-icons">
+            
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
 
 
 	</main>

@@ -3,6 +3,8 @@ title: "Contact Us"
 description: "Get in touch with Data-Driven Justice to discuss your project"
 draft: false
 
+layout: "contact"
+
 ################################## Contact ####################################
 contact:
   enable: true
