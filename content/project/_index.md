@@ -63,21 +63,21 @@ projects:
   - title: "Abolitionist Law Center"
     image: "images/portfolio/work8.jpg"
     
-    services: ["web-scraping-data-collection", "database-management", "data-analysis", "strategic-advocacy"]
+    services: ["web-scraping", "database-management", "data-analysis", "strategic-advocacy"]
     content: "Built comprehensive database of criminal court records and analyzed data for co-authored report on probation issues in Pittsburgh. Developed automated data collection systems and performed statistical analysis to identify systemic issues."
     link: "https://abolitionistlawcenter.org/resource/probation-in-allegheny-county/"
 
   - title: "Data Midsouth"
     image: "images/portfolio/work9.jpg"
     
-    services: ["web-scraping-data-collection", "cloud-infrastructure", "database-management"]
+    services: ["web-scraping", "cloud-infrastructure", "database-management"]
     content: "Developed webscraping software for housing and property data sources and deployed on Microsoft Azure & DataBricks. Created scalable data pipelines for real estate market analysis and housing policy research."
     link: "https://innovatememphis.com/"
 
   - title: "Innovate Memphis"
     image: "images/portfolio/work10.jpg"
     
-    services: ["web-scraping-data-collection", "database-management"]
+    services: ["web-scraping", "database-management"]
     content: "Migrated tens of thousands of documents from cloud storage to proprietary CRM, saving thousands of hours of manual data entry. Automated data transformation and validation processes to ensure data integrity throughout migration."
     link: "https://innovatememphis.com/"
 
@@ -133,7 +133,7 @@ projects:
   - title: "Saint Anselm's College"
     image: "images/portfolio/work18.jpg"
     
-    services: ["web-scraping-data-collection", "database-management"]
+    services: ["web-scraping", "database-management"]
     content: "Migrated personnel records from internal systems for archival purposes. Developed automated data extraction and transformation processes to preserve institutional knowledge and ensure regulatory compliance."
     link: "https://www.anselm.edu/"
 
@@ -161,14 +161,12 @@ projects:
 
   - title: "We of Action Virginia"
     image: "images/portfolio/work18.jpg"
-    
     services: ["web-app-development", "database-management", "automation"]
    # content: "Migrated personnel records from internal systems for archival purposes. Developed automated data extraction and transformation processes to preserve institutional knowledge and ensure regulatory compliance."
     link: "https://wofava.org/"
 
   - title: "American Civil Liberties Union (ACLU)"
     image: "images/portfolio/work18.jpg"
-    
     services: ["data-analysis"]
    # content: "Migrated personnel records from internal systems for archival purposes. Developed automated data extraction and transformation processes to preserve institutional knowledge and ensure regulatory compliance."
     link: "https://www.aclu.org/"

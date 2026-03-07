@@ -11,7 +11,7 @@ services:
   - "Web App Development"
   - "Data Security"
   - "Software Development"
-  - "Web Scraping & Data Collection"
+  - "Web Scraping"
   - "Cloud Infrastructure"
   - "Data Analysis"
   - "Database Management"
@@ -25,44 +25,40 @@ service:
   service_item:
 
   - name: "Process Mapping"
-    icon: "fas fa-sitemap"
-   # content: "Comprehensive workflow documentation, bottleneck identification, and strategic automation. We combine low-code solutions with custom development to eliminate manual tasks and improve data quality."
+    icon: "fas fa-project-diagram"
 
   - name: "Automation"
-    icon: "fas fa-database"
+    icon: "fas fa-magic"
 
   - name: "Document Generation"
-    icon: "fas fa-database"
+    icon: "fas fa-file-alt"
 
-  # service item loop
+  - name: "Web App Development"
+    icon: "fas fa-laptop-code"
+
+  - name: "Data Security"
+    icon: "fas fa-shield-alt"
+
   - name: "Software Development"
     icon: "fas fa-code"
-    #content: "Custom web applications, data processing systems, and API integrations. We build scalable solutions using modern technologies that grow with your organization and integrate seamlessly with your existing tools."
 
-  - name: "Web Scraping & Data Collection"
+  - name: "Web Scraping"
     icon: "fas fa-spider"
-   # content: "Automated data gathering from websites, government portals, and public databases. We create reliable, scheduled systems that collect, validate, and transform data while respecting rate limits and usage policies."
 
   - name: "Cloud Infrastructure"
     icon: "fas fa-cloud"
-   # content: "Strategic cloud adoption and migration services across AWS, GCP, and Azure. From database migration to serverless architectures, we help you leverage cloud technologies for improved performance, reliability, and cost efficiency."
 
   - name: "Data Analysis"
     icon: "fas fa-chart-line"
-   # content: "Statistical analysis, machine learning, and predictive modeling for evidence-based decision making. We specialize in program evaluation, impact assessment, and policy analysis for social sector organizations."
-
 
   - name: "Database Management"
     icon: "fas fa-database"
-   # content: "Database design, optimization, and migration services. We ensure your data is secure, accessible, and well-structured, with automated reporting and backup systems for peace of mind."
 
   - name: "Generative AI"
-    icon: "fas fa-robot"
-   # content: "Practical AI solutions including document processing, text analysis, and intelligent automation. We focus on real-world deployment with proper monitoring, bias detection, and explainability features."
+    icon: "fas fa-brain"
 
   - name: "Training"
-    icon: "fas fa-graduation-cap"
-  #  content: "Knowledge transfer and ongoing support to ensure your team can effectively use and maintain the solutions we build. We provide documentation, training sessions, and continued technical guidance."
+    icon: "fas fa-chalkboard-teacher"
 
 ################################## Service ####################################
 features:

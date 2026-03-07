@@ -71,16 +71,36 @@
       </div>
     </div>
     <div class="row">
-      {{ range .client_list }}
-      <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="client-item">
-          <a href="{{ .url }}" target="_blank" rel="noopener">
-            <div class="client-logo">
-              <span class="client-name">{{ .name }}</span>
-            </div>
-          </a>
+      {{/* Get project data and extract unique clients */}}
+      {{ $projectPage := site.GetPage "/project" }}
+      {{ if $projectPage }}
+        {{ $projects := $projectPage.Params.projects.project_item }}
+        {{ $uniqueClients := slice }}
+        {{ range $projects }}
+          {{ $title := .title }}
+          {{ $link := .link }}
+          {{ $found := false }}
+          {{ range $uniqueClients }}
+            {{ if eq .title $title }}
+              {{ $found = true }}
+            {{ end }}
+          {{ end }}
+          {{ if not $found }}
+            {{ $uniqueClients = $uniqueClients | append (dict "title" $title "link" $link) }}
+          {{ end }}
+        {{ end }}
+
+        {{ range $uniqueClients }}
+        <div class="col-md-3 col-sm-4 col-xs-6">
+          <div class="client-item">
+            <a href="{{ .link }}" target="_blank" rel="noopener">
+              <div class="client-logo">
+                <span class="client-name">{{ .title }}</span>
+              </div>
+            </a>
+          </div>
         </div>
-      </div>
+        {{ end }}
       {{ end }}
     </div>
   </div>

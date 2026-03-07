@@ -85,10 +85,10 @@
       <description></description>
     </item>
     <item>
-      <title>Web Scraping &amp; Data Collection</title>
-      <link>//localhost:1315/services/web-scraping--data-collection/</link>
+      <title>Web Scraping</title>
+      <link>//localhost:1315/services/web-scraping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1315/services/web-scraping--data-collection/</guid>
+      <guid>//localhost:1315/services/web-scraping/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,76 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1314/</loc>
+    <loc>//localhost:1315/</loc>
     <lastmod>2020-10-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1314/tags/lsc/</loc>
+    <loc>//localhost:1315/tags/lsc/</loc>
     <lastmod>2020-10-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1314/tags/</loc>
+    <loc>//localhost:1315/tags/</loc>
     <lastmod>2020-10-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1314/tags/talks/</loc>
+    <loc>//localhost:1315/tags/talks/</loc>
     <lastmod>2020-10-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1314/talks/</loc>
+    <loc>//localhost:1315/talks/</loc>
     <lastmod>2020-10-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1314/talks/2020-10-02-tennessee-evictions-summit/</loc>
+    <loc>//localhost:1315/talks/2020-10-02-tennessee-evictions-summit/</loc>
     <lastmod>2020-10-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1314/talks/2020-05-13-csv-conf-v5/</loc>
+    <loc>//localhost:1315/talks/2020-05-13-csv-conf-v5/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1314/talks/2020-03-06-2020-srln/</loc>
+    <loc>//localhost:1315/talks/2020-03-06-2020-srln/</loc>
     <lastmod>2020-03-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1314/talks/2020-01-11-2020-innovations-in-technology-conference/</loc>
+    <loc>//localhost:1315/talks/2020-01-11-2020-innovations-in-technology-conference/</loc>
     <lastmod>2020-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1314/talks/2019-10-02-dc-futures-forum/</loc>
+    <loc>//localhost:1315/talks/2019-10-02-dc-futures-forum/</loc>
     <lastmod>2019-10-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1314/tags/safe-lane/</loc>
+    <loc>//localhost:1315/tags/safe-lane/</loc>
     <lastmod>2019-10-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1314/talks/2019-03-14-data-science-dc-meetup/</loc>
+    <loc>//localhost:1315/talks/2019-03-14-data-science-dc-meetup/</loc>
     <lastmod>2019-03-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:1314/about/</loc>
+    <loc>//localhost:1315/about/</loc>
   </url><url>
-    <loc>//localhost:1314/services/automation/</loc>
+    <loc>//localhost:1315/services/automation/</loc>
   </url><url>
-    <loc>//localhost:1314/categories/</loc>
+    <loc>//localhost:1315/categories/</loc>
   </url><url>
-    <loc>//localhost:1314/project/</loc>
+    <loc>//localhost:1315/project/</loc>
   </url><url>
-    <loc>//localhost:1314/services/cloud-infrastructure/</loc>
+    <loc>//localhost:1315/services/cloud-infrastructure/</loc>
   </url><url>
-    <loc>//localhost:1314/contact/</loc>
+    <loc>//localhost:1315/contact/</loc>
   </url><url>
-    <loc>//localhost:1314/services/data-analysis/</loc>
+    <loc>//localhost:1315/services/data-analysis/</loc>
   </url><url>
-    <loc>//localhost:1314/services/data-security/</loc>
+    <loc>//localhost:1315/services/data-security/</loc>
   </url><url>
-    <loc>//localhost:1314/services/database-management/</loc>
+    <loc>//localhost:1315/services/database-management/</loc>
   </url><url>
-    <loc>//localhost:1314/services/document-generation/</loc>
+    <loc>//localhost:1315/services/document-generation/</loc>
   </url><url>
-    <loc>//localhost:1314/services/generative-ai/</loc>
+    <loc>//localhost:1315/services/generative-ai/</loc>
   </url><url>
-    <loc>//localhost:1314/service/</loc>
+    <loc>//localhost:1315/service/</loc>
   </url><url>
-    <loc>//localhost:1314/services/process-mapping/</loc>
+    <loc>//localhost:1315/services/process-mapping/</loc>
   </url><url>
-    <loc>//localhost:1314/services/</loc>
+    <loc>//localhost:1315/services/</loc>
   </url><url>
-    <loc>//localhost:1314/services/software-development/</loc>
+    <loc>//localhost:1315/services/software-development/</loc>
   </url><url>
-    <loc>//localhost:1314/services/training/</loc>
+    <loc>//localhost:1315/services/training/</loc>
   </url><url>
-    <loc>//localhost:1314/services/web-app-development/</loc>
+    <loc>//localhost:1315/services/web-app-development/</loc>
   </url><url>
-    <loc>//localhost:1314/services/web-scraping--data-collection/</loc>
+    <loc>//localhost:1315/services/web-scraping/</loc>
   </url>
 </urlset>
