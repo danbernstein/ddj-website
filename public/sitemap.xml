@@ -40,12 +40,38 @@
   </url><url>
     <loc>//localhost:1314/about/</loc>
   </url><url>
+    <loc>//localhost:1314/services/automation/</loc>
+  </url><url>
     <loc>//localhost:1314/categories/</loc>
   </url><url>
     <loc>//localhost:1314/project/</loc>
   </url><url>
+    <loc>//localhost:1314/services/cloud-infrastructure/</loc>
+  </url><url>
     <loc>//localhost:1314/contact/</loc>
   </url><url>
+    <loc>//localhost:1314/services/data-analysis/</loc>
+  </url><url>
+    <loc>//localhost:1314/services/data-security/</loc>
+  </url><url>
+    <loc>//localhost:1314/services/database-management/</loc>
+  </url><url>
+    <loc>//localhost:1314/services/document-generation/</loc>
+  </url><url>
+    <loc>//localhost:1314/services/generative-ai/</loc>
+  </url><url>
     <loc>//localhost:1314/service/</loc>
+  </url><url>
+    <loc>//localhost:1314/services/process-mapping/</loc>
+  </url><url>
+    <loc>//localhost:1314/services/</loc>
+  </url><url>
+    <loc>//localhost:1314/services/software-development/</loc>
+  </url><url>
+    <loc>//localhost:1314/services/training/</loc>
+  </url><url>
+    <loc>//localhost:1314/services/web-app-development/</loc>
+  </url><url>
+    <loc>//localhost:1314/services/web-scraping--data-collection/</loc>
   </url>
 </urlset>

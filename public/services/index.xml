@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services on Data-Driven Justice</title>
+    <link>//localhost:1315/services/</link>
+    <description>Recent content in Services on Data-Driven Justice</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="//localhost:1315/services/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automation</title>
+      <link>//localhost:1315/services/automation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1315/services/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud Infrastructure</title>
+      <link>//localhost:1315/services/cloud-infrastructure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1315/services/cloud-infrastructure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Analysis</title>
+      <link>//localhost:1315/services/data-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1315/services/data-analysis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Security</title>
+      <link>//localhost:1315/services/data-security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1315/services/data-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Database Management</title>
+      <link>//localhost:1315/services/database-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1315/services/database-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Document Generation</title>
+      <link>//localhost:1315/services/document-generation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1315/services/document-generation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Generative AI</title>
+      <link>//localhost:1315/services/generative-ai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1315/services/generative-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Process Mapping</title>
+      <link>//localhost:1315/services/process-mapping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1315/services/process-mapping/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Development</title>
+      <link>//localhost:1315/services/software-development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1315/services/software-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Training</title>
+      <link>//localhost:1315/services/training/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1315/services/training/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web App Development</title>
+      <link>//localhost:1315/services/web-app-development/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1315/services/web-app-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Scraping &amp; Data Collection</title>
+      <link>//localhost:1315/services/web-scraping--data-collection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1315/services/web-scraping--data-collection/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

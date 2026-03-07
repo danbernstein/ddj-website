@@ -1,6 +1,6 @@
 {{ with site.GetPage "/service" }}
 {{ with .Params.service }}
-<section id="service" class="service">
+<section id="service" class="service section-bg">
   <div class="container">
     <div class="row">
       <div class="section-title">
@@ -11,11 +11,13 @@
     <div class="row">
       {{ range .service_item }}
       <div class="col-sm-6 col-md-3">
-        <div class="service-item">
+        {{ $name := .name }}
+        {{ $slug := $name | urlize }}
+        <a class="service-item" href="{{ "/services/" | relURL }}{{ $slug }}/">
           <i class="{{ .icon }}"></i>
-          <h4>{{ .name | markdownify }}</h4>
+          <h4>{{ $name | markdownify }}</h4>
           <p>{{ .content | markdownify }}</p>
-        </div>
+        </a>
       </div>
       {{ end }}
     </div>

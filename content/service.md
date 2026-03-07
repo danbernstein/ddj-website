@@ -3,43 +3,66 @@ title: "Our Services"
 description: "Comprehensive data and technology solutions for nonprofits and small businesses"
 draft: false
 
+# Taxonomy terms for services (used for /services/<slug>/ pages)
+services:
+  - "Process Mapping"
+  - "Automation"
+  - "Document Generation"
+  - "Web App Development"
+  - "Data Security"
+  - "Software Development"
+  - "Web Scraping & Data Collection"
+  - "Cloud Infrastructure"
+  - "Data Analysis"
+  - "Database Management"
+  - "Generative AI"
+  - "Training"
+
 ################################## Service #####################################
 service:
   enable: true
   title: "What We Can Do For You"
   service_item:
+
+  - name: "Process Mapping"
+    icon: "fas fa-sitemap"
+   # content: "Comprehensive workflow documentation, bottleneck identification, and strategic automation. We combine low-code solutions with custom development to eliminate manual tasks and improve data quality."
+
+  - name: "Automation"
+    icon: "fas fa-database"
+
+  - name: "Document Generation"
+    icon: "fas fa-database"
+
   # service item loop
   - name: "Software Development"
     icon: "fas fa-code"
-    content: "Custom web applications, data processing systems, and API integrations. We build scalable solutions using modern technologies that grow with your organization and integrate seamlessly with your existing tools."
+    #content: "Custom web applications, data processing systems, and API integrations. We build scalable solutions using modern technologies that grow with your organization and integrate seamlessly with your existing tools."
 
   - name: "Web Scraping & Data Collection"
     icon: "fas fa-spider"
-    content: "Automated data gathering from websites, government portals, and public databases. We create reliable, scheduled systems that collect, validate, and transform data while respecting rate limits and usage policies."
+   # content: "Automated data gathering from websites, government portals, and public databases. We create reliable, scheduled systems that collect, validate, and transform data while respecting rate limits and usage policies."
 
   - name: "Cloud Infrastructure"
     icon: "fas fa-cloud"
-    content: "Strategic cloud adoption and migration services across AWS, GCP, and Azure. From database migration to serverless architectures, we help you leverage cloud technologies for improved performance, reliability, and cost efficiency."
+   # content: "Strategic cloud adoption and migration services across AWS, GCP, and Azure. From database migration to serverless architectures, we help you leverage cloud technologies for improved performance, reliability, and cost efficiency."
 
-  - name: "Data Analysis & Modeling"
+  - name: "Data Analysis"
     icon: "fas fa-chart-line"
-    content: "Statistical analysis, machine learning, and predictive modeling for evidence-based decision making. We specialize in program evaluation, impact assessment, and policy analysis for social sector organizations."
+   # content: "Statistical analysis, machine learning, and predictive modeling for evidence-based decision making. We specialize in program evaluation, impact assessment, and policy analysis for social sector organizations."
 
-  - name: "Process Mapping & Automation"
-    icon: "fas fa-sitemap"
-    content: "Comprehensive workflow documentation, bottleneck identification, and strategic automation. We combine low-code solutions with custom development to eliminate manual tasks and improve data quality."
 
   - name: "Database Management"
     icon: "fas fa-database"
-    content: "Database design, optimization, and migration services. We ensure your data is secure, accessible, and well-structured, with automated reporting and backup systems for peace of mind."
+   # content: "Database design, optimization, and migration services. We ensure your data is secure, accessible, and well-structured, with automated reporting and backup systems for peace of mind."
 
-  - name: "Machine Learning & AI"
+  - name: "Generative AI"
     icon: "fas fa-robot"
-    content: "Practical AI solutions including document processing, text analysis, and intelligent automation. We focus on real-world deployment with proper monitoring, bias detection, and explainability features."
+   # content: "Practical AI solutions including document processing, text analysis, and intelligent automation. We focus on real-world deployment with proper monitoring, bias detection, and explainability features."
 
-  - name: "Training & Support"
+  - name: "Training"
     icon: "fas fa-graduation-cap"
-    content: "Knowledge transfer and ongoing support to ensure your team can effectively use and maintain the solutions we build. We provide documentation, training sessions, and continued technical guidance."
+  #  content: "Knowledge transfer and ongoing support to ensure your team can effectively use and maintain the solutions we build. We provide documentation, training sessions, and continued technical guidance."
 
 ################################## Service ####################################
 features:

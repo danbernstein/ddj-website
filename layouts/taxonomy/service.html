@@ -1,0 +1,102 @@
+{{ define "main" }}
+
+{{ partial "page-title.html" . }}
+
+<section class="service-detail">
+  <div class="container">
+
+    {{/* Determine current service slug from term title */}}
+    {{ $currentSlug := .Title | urlize }}
+
+    {{/* Look up this service's metadata from the services page */}}
+    {{ $servicePage := site.GetPage "/service" }}
+    {{ if $servicePage }}
+      {{ $serviceData := $servicePage.Params.service }}
+      {{ with $serviceData.service_item }}
+      {{ range . }}
+        {{ $nameSlug := .name | urlize }}
+        {{ if eq $nameSlug $currentSlug }}
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block">
+              <h2>{{ .name }}</h2>
+              {{ with .content }}
+              <div class="service-description">
+                {{ . | markdownify }}
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      {{ end }}
+      {{ end }}
+    {{ else }}
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h2>{{ .Title }}</h2>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+
+    {{/* Collect client projects from the Client Work list page */}}
+    {{ $projectPage := site.GetPage "/project" }}
+    {{ if $projectPage }}
+      {{ $items := $projectPage.Params.projects.project_item }}
+      {{ $scratch := newScratch }}
+      {{ $scratch.Set "count" 0 }}
+      {{ range $items }}
+        {{ $services := index . "services" }}
+        {{ if and $services (in $services $currentSlug) }}
+          {{ $scratch.Add "count" 1 }}
+        {{ end }}
+      {{ end }}
+      {{ $count := $scratch.Get "count" }}
+
+      {{ if gt $count 0 }}
+      <div class="row">
+        {{ range $items }}
+          {{ $services := index . "services" }}
+          {{ if and $services (in $services $currentSlug) }}
+          {{ $title := index . "title" }}
+          {{ $image := index . "image" }}
+          {{ $content := index . "content" }}
+          {{ $link := index . "link" }}
+          <div class="col-sm-6 col-md-4">
+            <div class="portfolio-block">
+              <div class="caption">
+                <h4>
+                  {{ if $link }}
+                  <a href="{{ $link }}" target="_blank" rel="noopener">{{ $title }}</a>
+                  {{ else }}
+                  {{ $title }}
+                  {{ end }}
+                </h4>
+                <p>{{ $content }}</p>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        {{ end }}
+      </div>
+      {{ else }}
+      <div class="row">
+        <div class="col-md-12">
+          <p>No client projects are currently associated with this service. Check back soon.</p>
+        </div>
+      </div>
+      {{ end }}
+    {{ else }}
+    <div class="row">
+      <div class="col-md-12">
+        <p>Client work data is not available.</p>
+      </div>
+    </div>
+    {{ end }}
+
+  </div>
+</section>
+
+{{ end }}

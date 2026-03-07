@@ -26,13 +26,13 @@ contact_info:
       title: "Email"
       content: "danbernstein94@gmail.com"
 
-    - icon: "fas fa-map-marker-alt"
-      title: "Service Area"
-      content: "Remote & On-Site Consulting Available"
+  #  - icon: "fas fa-map-marker-alt"
+  #    title: "Service Area"
+  #    content: "Remote & On-Site Consulting Available"
 
-    - icon: "fas fa-clock"
-      title: "Response Time"
-      content: "24-48 hours"
+   # - icon: "fas fa-clock"
+   #   title: "Response Time"
+   #   content: "24-48 hours"
 
 # office
 office:
@@ -41,7 +41,7 @@ office:
   office_list:
   # office item loop
   - city: "Remote"
-    address: "Available for remote and on-site consulting"
+    address: "4503 28th Rd S, Arlington, VA 22206"
 ---
 
 ## Ready to Get Started?

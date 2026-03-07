@@ -1,0 +1,340 @@
+/* Custom Styles for Data-Driven Justice Website */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Typography Improvements */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #2c3e50;
+}
+
+/* Heading Typography */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1a252f;
+  letter-spacing: -0.02em;
+}
+
+/* Banner/Hero Section Typography */
+.slider .block h1 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 4.5rem !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.7) !important;
+  letter-spacing: -0.03em !important;
+  text-transform: none !important;
+}
+
+.slider .block p {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.6rem !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6) !important;
+}
+
+/* Section Titles */
+.section-title h2 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #1a252f;
+  margin-bottom: 1rem;
+}
+
+.section-title p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+/* About Section Typography */
+.about h2 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a252f;
+}
+
+.about p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #4a5568;
+}
+
+/* Button Typography */
+.btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.025em;
+  text-transform: none;
+}
+
+/* Navigation Typography */
+.navigation .navbar-nav li a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.navbar-brand {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.6rem !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .slider .block h1 {
+    font-size: 3.5rem !important;
+  }
+
+  .slider .block p {
+    font-size: 1.4rem !important;
+  }
+
+  .section-title h2 {
+    font-size: 2.25rem;
+  }
+
+  .about h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider .block h1 {
+    font-size: 2.75rem !important;
+  }
+
+  .slider .block p {
+    font-size: 1.2rem !important;
+  }
+
+  .section-title h2 {
+    font-size: 1.875rem;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Service Section Background */
+.service.section-bg {
+  background: #f8f9fa;
+  padding: 80px 0;
+}
+
+.service.section-bg .section-title {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.service.section-bg .section-title h2 {
+  color: #333;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.service.section-bg .section-title p {
+  color: #666;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Clients Section */
+.clients.section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.clients .section-title {
+  margin-bottom: 60px;
+}
+
+.clients .section-title h2 {
+  color: #333;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.clients .section-title p {
+  color: #666;
+  font-size: 18px;
+  margin: 0;
+}
+
+.client-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.client-item:hover {
+  transform: translateY(-5px);
+}
+
+.client-item a {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.client-logo {
+  background: #fff;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 30px 20px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.client-item:hover .client-logo {
+  border-color: #87ceeb;
+  box-shadow: 0 5px 20px rgba(135, 206, 235, 0.2);
+}
+
+.client-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.4;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .clients .section-title h2 {
+    font-size: 28px;
+  }
+
+  .client-logo {
+    padding: 20px 15px;
+    height: 100px;
+  }
+
+  .client-name {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .clients.section {
+    padding: 60px 0;
+  }
+
+  .clients .section-title {
+    margin-bottom: 40px;
+  }
+}
+
+/* Service Page Client Tiles */
+.service-detail .portfolio-block {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 20px;
+  background: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.service-detail .portfolio-block:hover {
+  border-color: #87ceeb;
+  box-shadow: 0 5px 15px rgba(135, 206, 235, 0.15);
+  transform: translateY(-2px);
+  background: #fafbfc;
+}
+
+.service-detail .portfolio-block .caption {
+  margin: 0;
+  overflow: hidden;
+}
+
+.service-detail .portfolio-block .caption h4 {
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.service-detail .portfolio-block .caption h4 a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.service-detail .portfolio-block:hover .caption h4 a {
+  color: #87ceeb;
+}
+
+.service-detail .portfolio-block .caption p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-height: 4.5em;
+}
+
+/* Responsive adjustments for service page tiles */
+@media (max-width: 768px) {
+  .service-detail .portfolio-block {
+    padding: 20px;
+    height: 160px;
+  }
+
+  .service-detail .portfolio-block .caption h4 {
+    font-size: 16px;
+  }
+
+  .service-detail .portfolio-block .caption p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-detail .portfolio-block {
+    padding: 18px;
+    height: 140px;
+  }
+}
