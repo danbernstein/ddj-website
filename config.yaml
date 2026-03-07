@@ -22,6 +22,12 @@ services:
   googleAnalytics:
     ID: 'G-MEASUREMENT_ID'
 
+############################# Taxonomies #############################
+taxonomies:
+  tag: "tags"
+  category: "categories"
+  service: "services"
+
 ############################# Build ##############################
 build:
   noJSConfigInAssets: false
@@ -57,9 +63,8 @@ params:
   phone: ""
   email: "danbernstein94@gmail.com"
   location: |
-    **Data-Driven Justice**
-    Consulting Services
-    Remote & On-Site
+    4503 28th Rd S
+    Arlington, VA 22206
   # copyright
   copyright: "© 2025 Data-Driven Justice. All rights reserved."
 
@@ -137,12 +142,12 @@ menus:
     - name: "Services"
       url: "#service"
       weight: 3
-    - name: "Projects"
-      url: "#portfolio"
+    - name: "Clients"
+      url: "#clients"
       weight: 4
-    - name: "Blog"
-      url: "blog/"
-      weight: 5
+   # - name: "Blog"
+   #   url: "blog/"
+   #   weight: 5
     - name: "Contact"
       url: "contact/"
       weight: 6
