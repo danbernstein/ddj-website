@@ -51,6 +51,12 @@
 {{ end }}
 <!-- /about -->
 
+<!-- service -->
+{{ if .Params.service.enable }}
+{{ partial "service.html" . }}
+{{ end }}
+<!-- /service -->
+
 <!-- portfolio -->
 {{ with .Params.portfolio }}
 {{ if .enable }}
@@ -72,12 +78,6 @@
 {{ end }}
 {{ end }}
 <!-- /portfolio -->
-
-<!-- service -->
-{{ if .Params.service.enable }}
-{{ partial "service.html" . }}
-{{ end }}
-<!-- /service -->
 
 <!-- call to action -->
 {{ if .Params.cta.enable }}
