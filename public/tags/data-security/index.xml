@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data security on Data By Dan</title>
+    <link>https://danbernstein.netlify.app/tags/data-security/</link>
+    <description>Recent content in data security on Data By Dan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;#169; 2020 Softorage. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 25 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://danbernstein.netlify.app/tags/data-security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Insecurity: HOA website</title>
+      <link>https://danbernstein.netlify.app/post/2023-11-25-data-insecurity-hoa-website/</link>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://danbernstein.netlify.app/post/2023-11-25-data-insecurity-hoa-website/</guid>
+      <description>This is Data Insecurity, a blog series about all the ways organizations fail to keep data secure online.
+I recently bought a condo that is governed by a Home Owners’ Association (HOA). The HOA has contracted with a property management company (PMC) to handle community affairs, maintenance, and finances. This PMC distributes information to homeowners via email and via their web portal, which is owned and operated by a web platform provider.</description>
+    </item>
+    
+    <item>
+      <title>Data Insecurity: Hiring Website</title>
+      <link>https://danbernstein.netlify.app/post/2023-10-21-data-insecurity-hiring-website/</link>
+      <pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://danbernstein.netlify.app/post/2023-10-21-data-insecurity-hiring-website/</guid>
+      <description>This is Data Insecurity, a blog series about all the ways organizations fail to keep data secure online.
+I recently applied to a job at a nonprofit through a third-party hiring platform. After submitting my application, the platform sent a link where I could check my application status and view the materials I had included in the application. After not hearing from the organization for a few weeks, I went to the link to view my status.</description>
+    </item>
+    
+    <item>
+      <title>Data Insecurity: Volunteer Website</title>
+      <link>https://danbernstein.netlify.app/post/2023-09-30-data-insecurity-volunteer/</link>
+      <pubDate>Sat, 30 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://danbernstein.netlify.app/post/2023-09-30-data-insecurity-volunteer/</guid>
+      <description>This is Data Insecurity, a blog series about all the ways organizations fail to keep data secure online.
+What is data security? To me, data security is ensuring only authorized users can access certain content when users are using your website and when they might be accessing it programmatically. Websites that secure their data using usernames and passwords need to implement this same level of security against programmatic access, otherwise their security can be easily compromised.</description>
+    </item>
+    
+  </channel>
+</rss>

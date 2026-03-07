@@ -1,0 +1,148 @@
+baseURL: "https://hugo-profile.netlify.app"
+languageCode: "en-us"
+title: "Data-Driven Justice"
+theme: "airspace-hugo"
+
+# post pagination
+pagination:
+  pagerSize: 6
+
+# post excerpt
+summaryLength: 10
+
+# google analytics
+# disqus short name
+disqusShortname: ""
+
+# disable language
+disableLanguages: []
+hasCJKLanguage: false
+
+services:
+  googleAnalytics:
+    ID: 'G-MEASUREMENT_ID'
+
+############################# Build ##############################
+build:
+  noJSConfigInAssets: false
+  useResourceCacheWhen: 'fallback'
+  buildStats:
+    enable: true
+
+############################# Outputs ##############################
+outputs:
+  home: ["HTML", "RSS", "JSON"]
+
+############################# Markup ###############################
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+############################# Params ##############################
+params:
+  # favicon
+  favicon: "/images/ddj_logo.jpeg"
+  # logo
+  logo: ""
+  logo_width: "150px"
+  logo_text: "Data-Driven Justice"
+  # navbar fixed to top
+  navbar_fixed: true
+  # meta description
+  description: "Data-Driven Justice helps organizations leverage data and technology to better serve their communities through strategic consulting and custom development."
+  author: "Data-Driven Justice"
+  image: "/images/ddj_logo.jpeg"
+  # contact info
+  phone: ""
+  email: "danbernstein94@gmail.com"
+  location: |
+    **Data-Driven Justice**
+    Consulting Services
+    Remote & On-Site
+  # copyright
+  copyright: "© 2025 Data-Driven Justice. All rights reserved."
+
+  contact:
+    form:
+      enable: true
+      use_netlify: true
+      use_recaptcha: false
+      action: "mailto:danbernstein94@gmail.com"
+      success_image: "images/paper-plane.svg"
+
+  # Preloader
+  preloader:
+    enable: false
+    preloader: ""
+
+  # Navigation button
+  navigation_button:
+    enable: true
+    label: "Get Started"
+    link: "contact"
+
+  ############################# social site ########################
+  social:
+    - title: "github"
+      icon: "fab fa-github"
+      link: "https://github.com/danbernstein"
+    - title: "linkedin"
+      icon: "fab fa-linkedin"
+      link: "https://www.linkedin.com/in/danbernstein94/"
+
+  ############################# Variables ##############################
+  variables:
+    color_primary: "#87ceeb"
+    body_color: "#fff"
+    text_color: "#666666"
+    text_dark: "#333333"
+    text_light: "#7b7b7b"
+    border_color: "#ACB9C4"
+    black: "#000000"
+    white: "#ffffff"
+    light: "#f5f5f5"
+    # font variables
+    font_size: "16px"
+    font_scale: "1.25"
+    font_primary: "Poppins:wght@300;400;500;600"
+    font_primary_type: "sans-serif"
+    font_secondary: "Merriweather:wght@300;400;700"
+    font_secondary_type: "serif"
+    font_icon: "Font Awesome 5 Free"
+
+  ############################# Plugins ##############################
+  plugins:
+    css:
+      - link: "plugins/bootstrap/bootstrap.min.css"
+      - link: "plugins/slick/slick.css"
+      - link: "plugins/font-awesome/fontawesome.min.css"
+      - link: "plugins/font-awesome/brands.css"
+      - link: "plugins/font-awesome/solid.css"
+    js:
+      - link: "plugins/jquery/jquery.min.js"
+      - link: "plugins/bootstrap/bootstrap.min.js"
+      - link: "plugins/slick/slick.min.js"
+      - link: "plugins/shuffle/shuffle.min.js"
+
+############################# Menus ##############################
+menus:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "About"
+      url: "#about"
+      weight: 2
+    - name: "Services"
+      url: "#service"
+      weight: 3
+    - name: "Projects"
+      url: "#portfolio"
+      weight: 4
+    - name: "Blog"
+      url: "blog/"
+      weight: 5
+    - name: "Contact"
+      url: "contact/"
+      weight: 6

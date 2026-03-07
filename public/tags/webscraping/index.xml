@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webscraping on Data By Dan</title>
+    <link>https://danbernstein.netlify.app/tags/webscraping/</link>
+    <description>Recent content in webscraping on Data By Dan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;#169; 2020 Softorage. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 10 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://danbernstein.netlify.app/tags/webscraping/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Webscraping Starter Kit</title>
+      <link>https://danbernstein.netlify.app/post/2022-10-10-webscraping-starter-kit/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://danbernstein.netlify.app/post/2022-10-10-webscraping-starter-kit/</guid>
+      <description>I often want to scrape a website, but I don’t know what packages which be required to scrape a given website. Some websites require a headless browser for some part of the webscraping process, often to acquire a cookie, token, or header that is rendered by JavaScript or network requests that are difficult to mock using simple requests. I hate when sites require a headless browser because it means introducing additional large dependencies, like a chromedriver.</description>
+    </item>
+    
+    <item>
+      <title>Getting Certificates For HTTPS Requests</title>
+      <link>https://danbernstein.netlify.app/post/2020-10-30-getting-certificates-for-https-requests/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://danbernstein.netlify.app/post/2020-10-30-getting-certificates-for-https-requests/</guid>
+      <description>Many websites use HTTPS to encrypt communication between your computer and their servers. Your browser will execute this automatically so you never see it happen. The only indicator is the icon depicting a lock next to the URL in the address bar.
+This presents an issue when you would like to make a programmatic request to their servers. We need that same certificate to access this website. Without the certificate chain, the request will fail.</description>
+    </item>
+    
+    <item>
+      <title>Scraping and Visualizing My Rideshare and Bicycling Activity</title>
+      <link>https://danbernstein.netlify.app/post/2019-05-12/visualizing-personal-transportation-use/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://danbernstein.netlify.app/post/2019-05-12/visualizing-personal-transportation-use/</guid>
+      <description>Summary: This small project started out with two goals: web scraping and visualizing movement data. As the project developed, I found that the web scraping took most of the time, and the visualization was best left to well-developed javascript frameworks, rather than developing it from scratch.
+Check out the final visualization.
+Webscraping Note: It is extremely important to read and understand the website user agreement for any website from which you might want to scrape data.</description>
+    </item>
+    
+  </channel>
+</rss>

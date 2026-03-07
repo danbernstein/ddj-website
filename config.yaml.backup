@@ -1,0 +1,513 @@
+baseURL: "https://hugo-profile.netlify.app"
+languageCode: "en-us"
+title: "Data-Driven Justice"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /post
+      weight: 1
+  #  - identifier: gallery
+  #    name: Gallery
+  #    title: Blog posts
+  #    url: /gallery
+  #    weight: 2
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "Data-Driven Justice"
+  description: Data-Driven Justice helps organizations leverage data and technology to better serve their communities through strategic consulting and custom development.
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/db_logo_transparent.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+  
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    disableThemeToggle: true
+    defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "Data-Driven Justice" # Brand name for the brand | default is the title variable
+    disableSearch: false
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: true
+      disableProjects: true
+      disableAchievements: true
+      disableContact: false
+      disableClientWork: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "We are"
+    title: "Data-Driven Justice"
+    subtitle: "transforming data into impact."
+    content: "We help organizations leverage data and technology to better serve their communities through strategic consulting, custom software development, and data infrastructure solutions."
+    image: /images/hero.svg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Our Services"
+      url: "#about"
+      download: false
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/danbernstein
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/danbernstein94/
+      #customIcons:
+      #  - icon: /fav.png
+      #    url: "https://example.com"
+
+  # About
+  about:
+    enable: true
+    title: "About"
+    image: "/images/me.jpg"
+    content: |-
+      Data-Driven Justice is a specialized consulting firm focused on helping nonprofits and small businesses transform their data into actionable insights and operational efficiency.
+
+      We work with local and national organizations, grassroots initiatives, and government entities that struggle to bring together technology, people, and processes to make data a strategic resource for effectively delivering social services and solutions.
+
+      Our team combines deep technical expertise with sector-specific knowledge to deliver solutions that truly meet your organization's needs. Have a challenge you want to discuss? Let's connect!
+    skills:
+      enable: true
+      title: "Our Core Services:"
+      items:
+        - "Software Development"
+        - "Web Scraping"
+        - "Cloud Adoption (AWS, GCP, Azure)"
+        - "Low-Code and No-Code Solutions"
+        - "Process Mapping and Landscape Analysis"
+      #  - "Data Landscape Analysis"
+        - "Database Management and Optimization"
+       # - "Data Migration"
+        - "Data Analysis for Policy and Programs"
+        - "Statistical Modeling"
+        - "Machine Learning"
+        - "Generative AI"
+
+  # Experience
+  experience:
+    enable: true
+    items:
+      - job: "Software Development"
+        company: "Custom Solutions for Your Organization"
+        date: "Full-Stack Development"
+        content: |
+          We build custom software solutions tailored to your organization's unique needs, from web applications to data processing systems. Our development approach prioritizes user experience, scalability, and maintainability.
+
+          Whether you need a client portal, internal management system, or data visualization dashboard, we work closely with your team to understand requirements and deliver solutions that truly serve your mission. We specialize in modern web technologies, API integration, and cloud-native architectures that grow with your organization.
+
+      - job: "Web Scraping & Data Collection"
+        company: "Automated Data Gathering"
+        date: "Scalable Data Pipelines"
+        content: |
+          Transform manual data collection processes into automated, reliable systems. We design and implement web scraping solutions that gather data from websites, government portals, and public databases while respecting rate limits and data usage policies.
+
+          Our scraping solutions include data validation, transformation pipelines, and scheduling systems to ensure you receive clean, structured data on a regular basis. We handle complex scenarios including JavaScript-heavy sites, authentication requirements, and CAPTCHA systems.
+
+      - job: "Cloud Adoption & Infrastructure"
+        company: "AWS, GCP, Azure Expertise"
+        date: "Scalable Cloud Solutions"
+        content: |
+          Transform your organization's technology infrastructure with strategic cloud adoption. We help you migrate from legacy systems, optimize costs, and leverage cloud-native services for improved performance and reliability.
+
+          Our cloud expertise spans database migration, serverless architectures, automated deployments, and security best practices. We provide hands-on implementation support and knowledge transfer to ensure your team can confidently manage and expand your cloud infrastructure.
+
+      - job: "Data Analysis & Statistical Modeling"
+        company: "Evidence-Based Decision Making"
+        date: "Research & Analytics"
+        content: |
+          Turn your data into actionable insights through rigorous statistical analysis, machine learning models, and predictive analytics. We specialize in program evaluation, impact assessment, and policy analysis for social sector organizations.
+
+          From identifying service gaps to measuring program outcomes, we help you understand what your data reveals about your community's needs and your organization's impact. Our analysis drives strategic decisions and supports grant applications with compelling evidence.
+
+      - job: "Process Mapping & Automation"
+        company: "Operational Efficiency"
+        date: "Workflow Optimization"
+        content: |
+          Streamline your operations through comprehensive process mapping, bottleneck identification, and strategic automation. We work with your team to document current workflows, identify improvement opportunities, and implement solutions that save time and reduce errors.
+
+          Our approach combines low-code/no-code solutions with custom development to create sustainable improvements. We help you leverage tools like Zapier, Microsoft Power Platform, and custom integrations to eliminate manual tasks and improve data quality.
+
+      - job: "Database Management & Optimization"
+        company: "Data Infrastructure Excellence"
+        date: "Scalable Data Systems"
+        content: |
+          Build and optimize robust database systems that support your organization's growth and reporting needs. From database design and migration to performance optimization and backup strategies, we ensure your data is secure, accessible, and reliable.
+
+          We work with various database technologies including PostgreSQL, MySQL, and cloud-based solutions. Our database solutions include automated reporting, data validation systems, and integration with your existing tools to create a unified data ecosystem.
+
+      - job: "Machine Learning & AI Integration"
+        company: "Intelligent Automation"
+        date: "Advanced Analytics"
+        content: |
+          Leverage artificial intelligence and machine learning to automate complex tasks, identify patterns, and make predictions from your data. We implement practical AI solutions including document processing, text analysis, predictive modeling, and chatbot development.
+
+          Our AI implementations are designed for real-world deployment with proper monitoring, bias detection, and explainability features. We help you understand when AI is appropriate for your use case and ensure solutions integrate seamlessly with your existing workflows.
+
+
+
+
+
+  clientwork:
+    enable: true
+    items:
+      - title: The Works, Inc.
+        location: Memphis, TN
+        content: Data Infrastructure, Eviction Prevention
+        details: Built internal software systems to expedite eviction settlement processes, heirs' property programs, and program reporting.
+        #image: /images/projects/converter.jpg
+        featured:
+          name: Org Site
+          link: https://theworkscdc.org/
+        
+      - title: Law Center for Better Housing
+        location: Chicago, IL
+        content: Process Mapping, Case Management, Automation
+        #details: 
+        featured:
+          name: Org Site
+          link: https://lcbh.org/
+          
+      - title: Indiana Legal Services
+        location: Indiana
+        content: Process Mapping, Facilitation
+        details: Interviewed Legal Staff to identify barriers and opportunity in leveraging technology to provide legal services.
+        featured:
+          name: Org Site
+          link: https://www.indianalegalservices.org/
+          
+      - title: Colorado Freedom Fund
+        location: Denver, CO
+        content: Data Analysis
+        details: Analyzed criminal court records to identify racial disparities in sentencing patterns. 
+        featured:
+          name: Org Site
+          link: https://www.coloradofreedomfund.org/
+          
+      - title: Alliance for a Healthier Generation
+        location: Portland, OR
+        content: Process Mapping, Data Infrastructure, Data Modeling
+        details: Reviewed data infrastructure and developed roadmap for improving data utilization and accessibility.
+
+        featured:
+          name: Org Site
+          link: https://www.healthiergeneration.org/
+
+      - title: Mid-Atlantic Innocence Project
+        location: Washington, DC
+        content: Process Mapping, Document Automation, Case Management Optimization
+        details: Developed efficient workflow management systems and new data collection tools to produce new insights about wrongful convictions.
+        featured:
+          name: Org Site
+          link: https://exonerate.org/
+
+      - title: Connecticut Department of Housing
+        location: Hartford, CT
+        content: Process Mapping, Data Infrastructure
+        details: Facilitated user interviews to recommend system improvements.
+        featured:
+          name: Org Site
+          link: https://portal.ct.gov/doh
+
+      - title: Abolitionist Law Center
+        location: Pittsburgh, PA
+        content: Web Scraping, Database Development, Data Analysis
+        details: Built a database of criminal court records and analyzed for co-authored report on probation issues in Pittsburgh.
+        featured:
+          name: Report
+          link: https://abolitionistlawcenter.org/resource/probation-in-allegheny-county/
+          
+      - title: Data Midsouth
+        location: Memphis, TN
+        content: Web Scraping, Data Infrastructure, Administrative Data
+        details: Developed webscraping software for housing and property data sources and deployed on Microsoft Azure & DataBricks.
+        featured:
+          name: Org Site
+          link: https://innovatememphis.com/
+          
+      - title: Innovate Memphis
+        location: Memphis, TN
+        content: Data Migration, Web Scraping
+        details: Migrated tens of thousands of documents from cloud storage to proprietary CRM, saving thousands of hours of manual data entry.
+        featured:
+          name: Org Site
+          link: https://innovatememphis.com/
+          
+      - title: Hester Street Collaborative
+        location: New York, NY
+        content: Data Analysis, Visualization
+        details: Ryan Carroll and I assessed and analyzed data regarding police involvement in mental health crises calls.
+        featured:
+          name: Project Summary
+          link: https://hesterstreet.org/projects/nypd-out-of-mental-health/
+          
+      - title: New Editions
+        location: Falls Church, VA
+        content: Data Engineering, Data Analysis
+        details: Provided data engineering support to analyze adult guardianship cases in state courts.
+        featured:
+          name: Org Site
+          link: https://www.neweditions.net/
+
+      - title: Children's Law Center
+        location: Washington, DC
+        content: Data Analysis
+        details: Conducted data analysis to identify homes at risk of hazard exposure.
+        featured:
+          name: Org Site
+          link: https://childrenslawcenter.org/
+          
+      - title: Root Change
+        location: Washington, DC
+        content: Knowledge Management, Generative AI
+        details: Developed internal AI slack bot to engage with organizational documents. 
+        featured:
+          name: Org Site
+          link: https://rootchange.org/
+
+      - title: Interamerican Development Bank
+        location: Washington, DC
+        content: Process Mapping, Generative AI
+        #details: Facilitated user interviews to recommend system improvements.
+        featured:
+          name: Org Site
+          link: http://idbg.org/
+
+      - title: HopeWorks
+        location: Memphis, TN
+        content: Case Management System Selection, Data Team Development
+        featured:
+          name: Org Site
+          link: https://www.whyhopeworks.org/
+
+      - title: Just City
+        location: Memphis, TN
+        content: Data Infrastructure, Data Analysis
+        featured:
+          name: Org Site
+          link: https://www.justcity.org/
+
+      - title: Saint Anselm's College
+        location: Manchester, NH
+        content: Web Scraping, Data Migration
+        details: Migrated personnel records from internal systems for archival purposes.
+        featured:
+          name: Org Site
+          link: https://www.anselm.edu/
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Bachelor of Science in Chemistry, Summa Cum Laude"
+        school:
+          name: "The George Washington University"
+          url: "https://www.gwu.edu/"
+        date: "2013 - 2017"
+        #GPA: "3.9 out of 4.0"
+       # content: |-
+       #   Extracurricular Activities
+       #     - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+       #     - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+
+  # Achievements
+  achievements:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: American Legal Tech Awards 2023
+        content: My work was runner-up in the 2023 American Legal Tech Awards.
+        url: "https://abovethelaw.com/2023/10/awards-recognize-the-people-out-here-making-lawyering-suck-less/"
+      #  image: /images/achievment.jpg
+      - title: Safe Lane wins 1st Place in 2019 DCx Competition
+        content: Developed a product using Artificial Intelligence.
+      #  image: /images/achievment.jpg
+
+
+  # projects
+  projects:
+    enable: true
+    title: "Projects"
+    items:
+      - title: Code, No Code
+        content: Data management is hard and the tools available don't make it any easier.
+        featured:
+          name: See more
+          link: /tags/code-no-code
+          
+      - title: Data Insecurity
+        content: A blog series on websites and the ways they leak user data.
+        featured:
+          name: See more
+          link: /tags/data-insecurity
+        ##badges:
+        #  - "Hugo"
+        #  - "Bootstrap"
+        #  - "Javascript"
+        #links:
+        #  - icon: fa fa-envelope
+        #    url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+        #  - icon: fab fa-github
+        #    url: https://github.com/gurusabarish/hugo-profile
+        #  - icon: fab fa-twitter
+        #    url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+      - title: Tech Tips
+        content: When I figure something out, I write it down so I don't make the same mistake again.
+        featured:
+          name: See more
+          link: /tags/tips
+
+      - title: Talks
+        content: A collection of talks I have given.
+        featured:
+          name: See more
+          link: /tags/talks
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: Ready to transform your data strategy? We're here to help.
+    btnName: Contact Us
+    btnLink: mailto:danbernstein94@gmail.com
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+
+  footer:
+    recentPosts:
+      path: "post"
+      count: 5
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/danbernstein
+      linkedin: https://www.linkedin.com/in/danbernstein94/
+     # twitter: https://twitter.com
+     # instagram: https://instagram.com
+     # facebook: https://facebook.com
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>

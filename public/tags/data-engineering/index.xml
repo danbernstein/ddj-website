@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data engineering on Data By Dan</title>
+    <link>https://danbernstein.netlify.app/tags/data-engineering/</link>
+    <description>Recent content in data engineering on Data By Dan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;#169; 2020 Softorage. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://danbernstein.netlify.app/tags/data-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploring ETL Options for Compaction on AWS</title>
+      <link>https://danbernstein.netlify.app/post/2021-02-20-etl-on-aws-glue-might-not-be-for-you/</link>
+      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://danbernstein.netlify.app/post/2021-02-20-etl-on-aws-glue-might-not-be-for-you/</guid>
+      <description>I have been scraping millions of court records for the past year. These records are scraped and saved as individual JSON files in Amazon S3, a cheap and durable storage solution on AWS. These records are then catalogued in AWS Glue so analysts and data scientists can analyze the data using SQL queries in AWS Athena. We also plan to build web applications using this data, such as dashboards visualizing aggregations updated on a weekly basis.</description>
+    </item>
+    
+  </channel>
+</rss>

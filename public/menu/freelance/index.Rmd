@@ -1,0 +1,38 @@
+---
+title: "Freelance Software Development"
+author: "Dan"
+date: "10/10/2022"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+I have completed freelance software development and data management work with multiple organizations. Below is a selection of my previous work.
+
+### Neighborhood Preservation, Inc. (NPI)
+
+NPI was responsible for distributing emergency rental assistance in Shelby County, Tennessee during the COVID-19 pandemic. This work included conducting intake with potential applicants, collecting and processing documentation, and providing limited legal assistance for individuals facing eviction. 
+
+NPI contracted with me to support them in all aspects of their programming. This work included the following:
+
+
+* identifying tenants at risk of eviction: NPI had extensive information about the individuals who applied for rental assistance; however, they did not know who was facing imminent eviction. To address this, I wrote software that searched for each applicant on the Shelby County General Sessions Court website every day to check for pending cases. Some applicants submitted case numbers for pending cases while others did not (either because they did not have a pending case at the time or because they were unaware of a case).
+
+
+* managing data migration between case management solutions. Over the course of two years, the program twice transitioned their data management solutions. In the early months, the program used Google Sheets and Drive for managing client information, before transitioning to Airtable and then Neighborly. I wrote the code to transition data between systems. After the migrations, I also built data syncing operations to ensure data was replicated across systems for ease of use.
+
+
+
+### Innovate Memphis
+
+Innovate Memphis subcontracted me to migrate tens of thousands of documents based on my experience with the Memphis rental assistance program throughout the pandemic. This work included automatically identifying and syncing documents between systems, saving the program hundreds of hours of manual data migration time.
+
+
+### Abolitionist Law Center (ALC)
+
+
+ALC was [awarded](https://www.urban.org/projects/catalyst-grant-program/abolitionist-law-center) a Catalyst Grant from Microsoft and the Urban Institute in 2021. ALC contracted me to build a database of criminal cases filed in Allegheny County Courts from 2000 through the present. This data was stored in a Postgres database on Amazon Web Services (AWS). The web scraping system was set up to allow for expansion to other Pennsylvania counties, courts, or time frames, including the capability to scrape any docket ad hoc with ease. This data was analyzed as part of a report on probation in 2022.
+
+<div align="center">
+<iframe display='block' height='600px' width='400px' src="content/alc-probation-report.pdf"></iframe>
+</div>

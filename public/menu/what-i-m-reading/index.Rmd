@@ -1,0 +1,52 @@
+---
+title: What I'm Reading
+author: Dan
+date: '2020-10-17'
+slug: []
+categories: []
+tags: ["what i'm reading"]
+description: ''
+lastmod: ''
+image: ''
+author_twitter: ''
+---
+
+```{r, include=F}
+#library(jsonlite)
+library(tidyverse)
+library(kableExtra)
+library(glue)
+library(tidyRSS)
+
+url_recent_reviews = 'https://www.goodreads.com/user/updates_rss/60637949?key=BJIaJsLzAH8ppWhx5ldDcGDYHCzgJ3xx6H9cWSBRi75W50Tl'
+df_recent_reviews = tidyfeed(url_recent_reviews) %>% 
+  filter(str_detect(item_guid, 'Review')) %>% 
+  separate(., item_description, c('stars', 'book'), sep='stars to') %>% 
+  separate(., book, c('Book', 'Author'), sep='by') %>% 
+  mutate(Title = glue::glue('[{Book}]({item_link})')) 
+
+print(df_recent_reviews)
+
+
+url_current_reads = 'https://www.goodreads.com/review/list_rss/60637949?key=BJIaJsLzAH8ppWhx5ldDcGDYHCzgJ3xx6H9cWSBRi75W50Tl&shelf=currently-reading'
+df_current_reads = tidyfeed(url_current_reads) %>% 
+    separate(., item_description, c('Author', 'other_info'), sep='name:') %>% 
+    mutate(Author = str_remove_all(Author, 'author: ')) %>% 
+    rename(Book = item_title) %>% 
+    mutate(Title = glue::glue('[{Book}]({item_link})')) 
+
+```
+
+```{r, echo=F}
+
+df_current_reads %>% 
+  select(Title, Author) %>% 
+kableExtra::kable(.) %>% 
+  kable_styling(bootstrap_options = c("striped", "hover")) %>% 
+  add_header_above(header = c("Currently Reading" = 2))
+
+df_recent_reviews %>% 
+  select(Title, Author) %>% 
+kableExtra::kable(.) %>% 
+  kable_styling(bootstrap_options = c("striped", "hover")) %>% 
+  add_header_above(header = c("Recently Finished" = 2))

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>security on Data By Dan</title>
+    <link>https://danbernstein.netlify.app/tags/security/</link>
+    <description>Recent content in security on Data By Dan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;#169; 2020 Softorage. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 02 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://danbernstein.netlify.app/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why Can&#39;t I Connect to my EC2 instance?</title>
+      <link>https://danbernstein.netlify.app/post/2023-01-02-ec2-ssh-connection-timed-out/</link>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://danbernstein.netlify.app/post/2023-01-02-ec2-ssh-connection-timed-out/</guid>
+      <description>Problem: I recently received an error while attempting to SSH into an EC2 instance. The error specifically said “ssh: connect to host ec2-XX-XXX-XX-XXX.compute-1.amazonaws.com port 22: Operation timed out” I checked the normal issue areas (connected to internet gateway and no unhealthy status checks) and all looked good.
+Solution: In looking at the instance’s security group more closely, I noticed that the inbound rule for SSH was restricted to a specific IP address.</description>
+    </item>
+    
+  </channel>
+</rss>
