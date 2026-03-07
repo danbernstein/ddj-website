@@ -62,9 +62,6 @@ img {
   max-width: 100%;
   height: auto; }
 
-html {
-  scroll-behavior: smooth; }
-
 a,
 a:focus,
 a:hover {
@@ -574,38 +571,33 @@ header .navbar-default .navbar-nav li a:hover {
           color: #000000; }
 
 .navigation {
-  background: #1a4568;
-  padding: 20px 0;
-  z-index: 9999; }
+  background: #ffffff;
+  padding: 20px 0; }
   .navigation .navbar {
     margin-bottom: 0px;
     border: 0px; }
   .navigation .navbar-brand {
-    padding-top: 15px;
-    color: #ffffff !important;
-    font-weight: 500;
-    font-size: 16px;
-    text-transform: uppercase; }
+    padding-top: 5px; }
   .navigation .navbar {
     background: none;
     border: 0px; }
     .navigation .navbar .navbar-nav {
       padding-top: 10px; }
       .navigation .navbar .navbar-nav a {
-        color: #ffffff;
+        color: #7b7b7b;
         padding: 10px 15px;
         font-weight: 500;
         font-size: 14px;
         text-transform: uppercase; }
         .navigation .navbar .navbar-nav a:hover, .navigation .navbar .navbar-nav a:focus {
-          color: #1f8dba;
+          color: #000000;
           background: transparent; }
       .navigation .navbar .navbar-nav a.current {
-        color: #186c8e;
+        color: #000000;
         pointer-events: none;
         cursor: default; }
       .navigation .navbar .navbar-nav a.current-parent {
-        color: #186c8e; }
+        color: #000000; }
       .navigation .navbar .navbar-nav select {
         margin: 10px 15px; }
     .navigation .navbar .current > .dropdown-toggle {
@@ -734,19 +726,8 @@ header .navbar-default .navbar-nav li a:hover {
     .service {
       padding-top: 20px;
       padding-bottom: 20px; } }
-  .service .row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch; }
-  .service [class*="col-"] {
-    display: flex;
-    flex-direction: column; }
   .service .service-item {
-    padding-bottom: 30px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    height: 100%; }
+    padding-bottom: 30px; }
     .service .service-item i {
       font-size: 50px;
       color: #87ceeb; }
@@ -758,8 +739,7 @@ header .navbar-default .navbar-nav li a:hover {
       text-transform: uppercase; }
     .service .service-item p {
       padding-top: 10px;
-      margin: 0;
-      flex: 1; }
+      margin: 0; }
 
 .dark-service .title {
   color: #ffffff; }
