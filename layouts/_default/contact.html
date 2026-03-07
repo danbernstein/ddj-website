@@ -4,9 +4,10 @@
 
 <section class="contact-form">
   <div class="container">
-    {{ with site.Params.contact.form }}{{ if .enable -}}
+    {{ $contact_form := site.Params.contact.form }}
+    {{ if $contact_form.enable }}
     <div class="row">
-      <form method="POST" {{ if .use_netlify }}name="{{ printf "contact_%s" $.Language.Lang }}" action="{{ "/message_sent" | relLangURL }}" netlify netlify-honeypot="nhp"{{ else }}name="contact" action="{{ .action | safeURL }}"{{ end }}>
+      <form method="POST" {{ if $contact_form.use_netlify }}name="{{ printf "contact_%s" $.Language.Lang }}" action="{{ "/message_sent" | relLangURL }}" netlify netlify-honeypot="nhp"{{ else }}name="contact" action="{{ $contact_form.action | safeURL }}"{{ end }}>
         <div class="col-md-6 col-sm-12">
           <div class="block">
             <div class="form-group">
@@ -21,12 +22,12 @@
               <label for="subject" hidden>{{ i18n "contact_form_subject" }}</label>
               <input id="subject" name="subject" type="text" class="form-control" placeholder="{{ i18n "contact_form_subject" }}" required>
             </div>
-            {{ if .use_netlify -}}
+            {{ if $contact_form.use_netlify -}}
             <div class="form-group-h">
               <input name="nhp" type="text" class="form-control" placeholder="Are you made of flesh and bone?" style="display:none;">
             </div>
             {{- end }}
-            {{ if .use_recaptcha -}}
+            {{ if $contact_form.use_recaptcha -}}
             <div class="form-group-h">
               <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
             </div>
@@ -44,7 +45,7 @@
         </div>
       </form>
     </div>
-    {{- end }}{{ end }}
+    {{ end }}
     <div class="contact-box row">
       {{ with site.Params.contact -}}
       <div class="col-md-6 col-sm-12">
