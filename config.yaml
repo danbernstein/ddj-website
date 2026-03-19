@@ -1,4 +1,4 @@
-baseURL: ""
+baseURL: "https://datadrivenjustice.io/"
 languageCode: "en-us"
 title: "Data-Driven Justice"
 theme: "airspace-hugo"
