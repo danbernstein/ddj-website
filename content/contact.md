@@ -15,7 +15,7 @@ contact:
 contact_form:
   enable: true
   title: "Get In Touch"
-  subtitle: "Have a project in mind? Send us a message and we'll respond within 24 hours."
+  subtitle: "Have a project in mind? Send us a message and we'll respond within 48 hours."
 
 # contact info
 contact_info:

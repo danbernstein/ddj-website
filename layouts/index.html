@@ -3,19 +3,18 @@
 <!-- banner -->
 {{ with .Params.banner }}
 {{ if .enable }}
-<section class="slider {{ if .bg_overlay }}overly{{ end }}" style="background-image: url('{{ .bg_image | relURL }}');">
+<section class="hero-section">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block">
-          {{ with .title }}<h1>{{ . | markdownify }}</h1>{{ end }}
-          {{ with .content }}{{ . | $.Page.RenderString (dict "display" "block") }}{{ end }}
-          {{ with .button }}
-          {{ if .enable }}
-          <a href="{{ .link | relLangURL }}" class="btn btn-main animated fadeInUp">{{ .label }}</a>
-          {{ end }}
-          {{ end }}
+    <div class="row align-items-center">
+      <div class="col-md-6 hero-text-col">
+        <div class="hero-content">
+          {{ with .title }}<h1 class="hero-title">{{ . | markdownify }}</h1>{{ end }}
+          {{ with .content }}<div class="hero-desc">{{ . | $.Page.RenderString (dict "display" "block") }}</div>{{ end }}
+          <a href="{{ "contact/" | relLangURL }}" class="btn btn-main animated fadeInUp">Get Started</a>
         </div>
+      </div>
+      <div class="col-md-6 hero-illustration-col">
+        <img src="/images/undraw/analytics.svg" alt="Data Analytics Illustration" class="img-fluid hero-illustration">
       </div>
     </div>
   </div>
@@ -41,7 +40,7 @@
       </div>
       <div class="col-md-5 col-sm-12">
         <div class="block">
-          <img src="{{ .image | relURL }}" class="img-responsive" alt="Img">
+          <img src="/images/undraw/team-work.svg" class="img-responsive undraw-illustration" alt="Team Collaboration">
         </div>
       </div>
     </div>

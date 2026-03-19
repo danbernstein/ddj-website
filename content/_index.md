@@ -5,7 +5,7 @@ banner:
   bg_image: "/images/data_driven_justice_banner.jpeg"
   bg_overlay: true
   title: "Data-Driven Justice"
-  content: "We help organizations leverage data and technology to better serve their communities through strategic consulting, custom software development, and data infrastructure solutions."
+  content: "We help legal aid and social service organizations leverage data and technology to better serve their communities through strategic consulting, custom software development, and data infrastructure solutions."
   #button:
   #  enable: false
   #  label: "Our Services"
@@ -16,7 +16,7 @@ about:
   enable: true
   title: "About Data-Driven Justice"
   description: "Specialized consulting firm focused on helping nonprofits and small businesses transform their data into actionable insights and operational efficiency."
-  content: "We work with local and national organizations, grassroots initiatives, and government entities that struggle to bring together technology, people, and processes to make data a strategic resource for effectively delivering social services and solutions. Our team combines deep technical expertise with sector-specific knowledge to deliver solutions that truly meet your organization's needs."
+  content: "We work with local and national organizations, grassroots initiatives, and government entities that struggle to bring together technology, people, and processes to make data a strategic resource for effectively delivering social services and solutions."
   image: "/images/ddj_logo.jpeg"
 
 ######################### Portfolio ###############################

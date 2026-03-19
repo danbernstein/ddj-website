@@ -1,80 +1,96 @@
 {{ define "main" }}
 
-{{ partial "page-title.html" . }}
-
-<section class="contact-form">
+<section class="contact-hero">
   <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 contact-hero-text">
+        <h1>{{ .Params.contact.title | default .Title }}</h1>
+        <p>{{ .Params.contact.subtitle }}</p>
+      </div>
+      <div class="col-md-6 contact-hero-illustration">
+        <img src="/images/undraw/contact-subscribe.svg" alt="Get in Touch" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-body">
+  <div class="container">
+
     {{ $contact_form := site.Params.contact.form }}
     {{ if $contact_form.enable }}
     <div class="row">
-      <form method="POST" {{ if $contact_form.use_netlify }}name="{{ printf "contact_%s" $.Language.Lang }}" action="{{ "/message_sent" | relLangURL }}" netlify netlify-honeypot="nhp"{{ else }}name="contact" action="{{ $contact_form.action | safeURL }}"{{ end }}>
-        <div class="col-md-6 col-sm-12">
-          <div class="block">
-            <div class="form-group">
-              <label for="name" hidden>{{ i18n "contact_form_name" }}</label>
-              <input id="name" name="name" type="text" class="form-control" placeholder="{{ i18n "contact_form_name" }}" required>
+      <div class="col-md-10 col-md-offset-1">
+        <div class="contact-form-card">
+          <h2>{{ .Params.contact_form.title | default "Get In Touch" }}</h2>
+          <p class="contact-form-subtitle">{{ .Params.contact_form.subtitle }}</p>
+          <form method="POST" {{ if $contact_form.use_netlify }}name="{{ printf "contact_%s" $.Language.Lang }}" action="{{ "/message_sent" | relLangURL }}" netlify netlify-honeypot="nhp"{{ else }}name="contact" action="{{ $contact_form.action | safeURL }}"{{ end }}>
+            {{ if $contact_form.use_netlify }}
+            <div style="display:none;"><input name="nhp" type="text"></div>
+            {{ end }}
+            {{ if $contact_form.use_recaptcha }}
+            <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
+            {{ end }}
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input id="name" name="name" type="text" class="form-control contact-input" placeholder="{{ i18n "contact_form_name" }}" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input id="email" name="email" type="email" autocomplete="email" class="form-control contact-input" placeholder="{{ i18n "contact_form_email" }}" required>
+                </div>
+              </div>
             </div>
             <div class="form-group">
-              <label for="email" hidden>{{ i18n "contact_form_email" }}</label>
-              <input id="email" name="email" type="email" autocomplete="email" class="form-control" placeholder="{{ i18n "contact_form_email" }}" required>
+              <input id="subject" name="subject" type="text" class="form-control contact-input" placeholder="{{ i18n "contact_form_subject" }}" required>
             </div>
             <div class="form-group">
-              <label for="subject" hidden>{{ i18n "contact_form_subject" }}</label>
-              <input id="subject" name="subject" type="text" class="form-control" placeholder="{{ i18n "contact_form_subject" }}" required>
+              <textarea id="message" name="message" class="form-control contact-input" rows="6" placeholder="{{ i18n "contact_form_message" }}" required></textarea>
             </div>
-            {{ if $contact_form.use_netlify -}}
-            <div class="form-group-h">
-              <input name="nhp" type="text" class="form-control" placeholder="Are you made of flesh and bone?" style="display:none;">
-            </div>
-            {{- end }}
-            {{ if $contact_form.use_recaptcha -}}
-            <div class="form-group-h">
-              <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
-            </div>
-            {{- end }}
-          </div>
+            <button class="btn btn-main" type="submit">Send Message</button>
+          </form>
         </div>
-        <div class="col-md-6 col-sm-12">
-          <div class="block">
-            <div class="form-group-2">
-              <label for="message" hidden>{{ i18n "contact_form_message" }}</label>
-              <textarea id="message" name="message" class="form-control" rows="4" placeholder="{{ i18n "contact_form_message" }}" required></textarea>
-            </div>
-            <button class="btn btn-default" type="submit">{{ i18n "submit" }}</button>
-          </div>
-        </div>
-      </form>
+      </div>
     </div>
     {{ end }}
-    <div class="contact-box row">
-      {{ with site.Params.contact -}}
-      <div class="col-md-6 col-sm-12">
-        <div class="block">
-          <h2>{{ i18n "address_title" }}</h2>
-          <ul class="address-block">
-            {{ $add_address_descriptors := .address_descriptors }}
-            {{ with site.Params.location }}<li><i class="fas fa-map-marker-alt"></i>{{ if $add_address_descriptors }}{{ i18n "location" | printf "%s: " }}{{ end }}<div>{{ . | markdownify }}</div></li>{{ end }}
-            {{ with site.Params.email }}<li><i class="fas fa-envelope"></i>{{ if $add_address_descriptors }}{{ i18n "email" | printf "%s: " }}{{ end }}{{ partial "cloak_email" . }}</li>{{ end }}
-            {{ with site.Params.phone }}<li><i class="fas fa-tty"></i>{{ if $add_address_descriptors }}{{ i18n "phone" | printf "%s: " }}{{ end }}{{ . }}</li>{{ end }}
-          </ul>
-          <ul class="social-icons">
-            {{ range .Site.Params.social }}
-            <li><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
-            {{ end }}
-          </ul>
-        </div>
-      </div>
-      {{- end }}
-      {{ if site.Params.gmap.enable -}}
-      <div class="col-md-6 col-sm-12">
-        <div class="block">
-          <div class="google-map">
-            <div class="map" id="map" data-latitude="{{ site.Params.gmap.map_latitude }}" data-longitude="{{ site.Params.gmap.map_longitude }}" data-marker="{{ site.Params.gmap.map_marker | relURL }}" data-marker-name="{{ site.Title }}"></div>
+
+    <div class="row contact-info-row">
+      <div class="col-md-5 col-md-offset-1">
+        <div class="contact-info-card">
+          <h3>Contact Info</h3>
+          {{ with site.Params.email }}
+          <div class="contact-info-item">
+            <i class="fas fa-envelope"></i>
+            <span>{{ partial "cloak_email" . }}</span>
           </div>
+          {{ end }}
+          {{ with site.Params.social }}
+          <div class="contact-social">
+            <p>Find us on</p>
+            <ul class="contact-social-list">
+              {{ range . }}
+              <li><a href="{{ .link | safeURL }}" target="_blank" rel="noopener"><i class="{{ .icon }}"></i> {{ .title | title }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+          {{ end }}
         </div>
       </div>
-      {{- end }}
+      <div class="col-md-5">
+        <div class="contact-expect-card">
+          <h3>What to Expect</h3>
+          <ol class="contact-steps">
+            <li><strong>Initial Consultation</strong>: We discuss your challenges and goals</li>
+            <li><strong>Project Proposal</strong>: A detailed plan with timeline and deliverables</li>
+            <li><strong>Collaborative Build</strong>: Regular check-ins throughout</li>
+            <li><strong>Delivery & Support</strong>: Documentation and ongoing assistance</li>
+          </ol>
+        </div>
+      </div>
     </div>
+
   </div>
 </section>
 

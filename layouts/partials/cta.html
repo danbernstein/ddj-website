@@ -1,0 +1,22 @@
+{{ with site.GetPage "/" }}
+{{ with .Params.cta }}
+<section class="cta-modern section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-7 cta-text-col">
+        {{ with .title }}<h2>{{ . | markdownify }}</h2>{{ end }}
+        {{ with .content }}<p>{{ . | markdownify }}</p>{{ end }}
+        {{ with .button }}
+        {{ if .enable }}
+        <a class="btn btn-main" href="{{ .link | relLangURL }}">{{ .label }}</a>
+        {{ end }}
+        {{ end }}
+      </div>
+      <div class="col-md-5 cta-illustration-col">
+        <img src="/images/undraw/project-team.svg" alt="Project Team" class="img-fluid cta-illustration">
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}

@@ -8,16 +8,27 @@
         {{ with .description }}<p>{{ . | markdownify }}</p>{{ end }}
       </div>
     </div>
-    <div class="row">
+    <div class="row capabilities-row">
       {{ range .service_item }}
-      <div class="col-sm-6 col-md-3">
-        {{ $name := .name }}
-        {{ $slug := $name | urlize }}
-        <a class="service-item" href="{{ "/services/" | relURL }}{{ $slug }}/">
+      <div class="col-sm-6 col-md-6">
+        {{ $title := .title }}
+        {{ if .link }}
+        <a class="service-item capability-card" href="{{ .link }}">
+        {{ else }}
+        <div class="service-item capability-card">
+        {{ end }}
+          {{ with .image }}
+          <div class="capability-illustration">
+            <img src="{{ . }}" alt="{{ $title }}" class="img-fluid">
+          </div>
+          {{ end }}
           <i class="{{ .icon }}"></i>
-          <h4>{{ $name | markdownify }}</h4>
-          <p>{{ .content | markdownify }}</p>
+          <h4>{{ $title | markdownify }}</h4>
+        {{ if .link }}
         </a>
+        {{ else }}
+        </div>
+        {{ end }}
       </div>
       {{ end }}
     </div>
