@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "rm -rf themes/airspace-hugo && git clone https://github.com/themefisher/airspace-hugo.git themes/airspace-hugo && hugo --gc --minify --baseURL $DEPLOY_PRIME_URL"
+command = "rm -rf themes/airspace-hugo && git clone https://github.com/themefisher/airspace-hugo.git themes/airspace-hugo && hugo --gc --minify --baseURL https://datadrivenjustice.io/"
 
 [build.environment]
 HUGO_VERSION = "0.157.0"
