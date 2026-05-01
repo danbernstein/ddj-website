@@ -14,8 +14,8 @@ service:
     image: "/images/undraw/service-data-systems.svg"
     description: "Build, migrate, and secure the data foundation your organization relies on. Includes database design, cloud infrastructure, case management implementation, and data access governance."
     link: ""
-
-  - title: "Process Design & Systems Thinking"
+    
+  - title: "Intake Assessments and Process Improvement"
     icon: "ti-map"
     image: "/images/undraw/service-process-design.svg"
     description: "Clarify how your organization works before building anything. Includes process mapping, workflow ideation, system design, and stakeholder alignment."
