@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<div class="wrap">
+  {{ partial "poster-nav.html" . }}
+
+  <header class="page-head sent-head">
+    <h1>{{ .Title | default "Message sent" }}</h1>
+    <p class="standfirst">
+      {{ .Params.message | default "Thanks for reaching out. We read every message and usually reply within a day or two." }}
+    </p>
+    <div class="cta-row">
+      <a class="btn" href="{{ "/" | relLangURL }}">Back to the homepage</a>
+    </div>
+  </header>
+</div>
+
+{{ partial "poster-footer.html" . }}
+
+{{ end }}

@@ -1,0 +1,102 @@
+{{ define "main" }}
+
+<div class="wrap">
+  {{ partial "poster-nav.html" . }}
+
+  <header class="page-head">
+    <div class="crumb">
+      <a href="{{ "/" | relLangURL }}">Home</a>
+    </div>
+    <h1>{{ .Params.contact.title | default .Title }}</h1>
+    {{ with .Params.contact.subtitle }}<p class="standfirst">{{ . }}</p>{{ end }}
+  </header>
+</div>
+
+<section class="contact-sec">
+  <div class="wrap contact-grid">
+
+    {{ $form := site.Params.contact.form }}
+    {{ if $form.enable }}
+    <div class="contact-form-card">
+      <h2>{{ .Params.contact_form.title | default "Get in touch" }}</h2>
+      {{ with .Params.contact_form.subtitle }}<p class="form-sub">{{ . }}</p>{{ end }}
+
+      <form method="POST"
+        {{ if $form.use_netlify }}
+        name="{{ printf "contact_%s" $.Language.Lang }}"
+        action="{{ "/message_sent" | relLangURL }}"
+        netlify netlify-honeypot="nhp"
+        {{ else }}
+        name="contact" action="{{ $form.action | safeURL }}"
+        {{ end }}>
+
+        {{ if $form.use_netlify }}
+        <div hidden><input name="nhp" type="text" tabindex="-1" autocomplete="off"></div>
+        {{ end }}
+        {{ if $form.use_recaptcha }}
+        <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
+        {{ end }}
+
+        <div class="field-row">
+          <div class="field">
+            <label for="name">{{ i18n "contact_form_name" }}</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">{{ i18n "contact_form_email" }}</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="subject">{{ i18n "contact_form_subject" }}</label>
+          <input id="subject" name="subject" type="text" required>
+        </div>
+
+        <div class="field">
+          <label for="message">{{ i18n "contact_form_message" }}</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button class="btn" type="submit">Send it</button>
+      </form>
+    </div>
+    {{ end }}
+
+    <aside class="contact-side">
+      {{ with site.Params.email }}
+      <div class="side-block">
+        <div class="block-label">Or just email</div>
+        <a class="email-direct" href="mailto:{{ . }}">{{ . }}</a>
+      </div>
+      {{ end }}
+
+      {{ with site.Params.social }}
+      <div class="side-block">
+        <div class="block-label">Elsewhere</div>
+        <ul class="social-list">
+          {{ range . }}
+          <li><a href="{{ .link | safeURL }}" target="_blank" rel="noopener">{{ .title | title }} &#8599;</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      {{ with .Params.expect }}
+      <div class="side-block expect">
+        <div class="block-label">What happens next</div>
+        <ol class="expect-steps">
+          {{ range . }}
+          <li><strong>{{ .title }}</strong>{{ with .description }} — {{ . }}{{ end }}</li>
+          {{ end }}
+        </ol>
+      </div>
+      {{ end }}
+    </aside>
+
+  </div>
+</section>
+
+{{ partial "poster-footer.html" . }}
+
+{{ end }}

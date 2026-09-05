@@ -1,7 +1,10 @@
 {{ $f := site.Home.Params.footer }}
+{{/* The contact page is already a call to action; don't repeat it below. */}}
+{{ $suppressCta := .Params.hide_footer_cta }}
 {{ with $f }}
-<footer class="footer" id="contact">
+<footer class="footer{{ if $suppressCta }} is-minimal{{ end }}" id="contact">
   <div class="wrap">
+    {{ if not $suppressCta }}
     <div class="big">
       {{ .headline_lead }}
       <span class="circ">
@@ -15,6 +18,7 @@
       <br>
       {{ .headline_tail }}
     </div>
+    {{ end }}
     <div class="loc">
       {{ partial "virginia-icon.html" . }}
       <span class="loc-text">{{ .location }}</span>

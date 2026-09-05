@@ -1,21 +1,34 @@
 ---
-title: "Contact Us"
+title: "Contact"
 description: "Get in touch with Data-Driven Justice to discuss your project"
 draft: false
 
+type: "poster"
 layout: "contact"
+
+# this page is the CTA; no need to repeat it in the footer
+hide_footer_cta: true
 
 ################################## Contact ####################################
 contact:
   enable: true
-  title: "Ready to Transform Your Data Strategy?"
-  subtitle: "Let's discuss how we can help your organization succeed"
+  title: "Let's talk"
+  subtitle: "Tell us what's not working. You don't need to know what you need — figuring that out is the first part of the job."
 
 # contact form
 contact_form:
   enable: true
-  title: "Get In Touch"
-  subtitle: "Have a project in mind? Send us a message and we'll respond within 48 hours."
+  title: "Get in touch"
+  subtitle: "Have a project in mind? Send a message and we'll respond within 48 hours."
+
+# shown in the side column
+expect:
+  - title: "We read it"
+    description: "A real person, usually within a day or two."
+  - title: "A short call"
+    description: "We talk through what's going on. No pitch deck."
+  - title: "A written scope"
+    description: "What we'd do, what it costs, how long it takes."
 
 # contact info
 contact_info:
