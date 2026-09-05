@@ -1,49 +1,52 @@
 ---
 title: "Our Services"
 description: "Comprehensive data and technology solutions for nonprofits and small businesses"
-draft: false
+# Superseded by the /what-we-do/ section; /service/ now redirects there.
+draft: true
 
 ################################## Service #####################################
 service:
   enable: true
   title: "What We Can Do For You"
+  subtitle: "Click on any service to see detailed case studies and examples"
   service_item:
 
-  - title: "Data Systems & Infrastructure"
-    icon: "ti-server"
-    image: "/images/undraw/service-data-systems.svg"
-    description: "Build, migrate, and secure the data foundation your organization relies on. Includes database design, cloud infrastructure, case management implementation, and data access governance."
-    link: ""
-    
-  - title: "Intake Assessments and Process Improvement"
+  - title: "Intake Assessments & Process Improvement"
     icon: "ti-map"
     image: "/images/undraw/service-process-design.svg"
-    description: "Clarify how your organization works before building anything. Includes process mapping, workflow ideation, system design, and stakeholder alignment."
-    link: ""
+   # description: "Clarify how your organization works before building anything. Includes process mapping, workflow ideation, system design, and stakeholder alignment."
+    link: "services/process-improvement/"
+
+  - title: "Case Management Systems"
+    icon: "ti-server"
+    image: "/images/undraw/service-data-systems.svg"
+   # description: "Build, migrate, and secure the data foundation your organization relies on. Includes database design, cloud infrastructure, case management implementation, and data access governance."
+    link: "services/data-systems/"
+    
 
   - title: "Automation & Document Generation"
     icon: "ti-settings"
     image: "/images/undraw/service-process-automation.svg"
-    description: "Eliminate repetitive manual work. Includes workflow automation, document generation, data collection pipelines, and scheduled task management."
-    link: ""
+   # description: "Eliminate repetitive manual work. Includes workflow automation, document generation, data collection pipelines, and scheduled task management."
+    link: "services/automation/"
 
   - title: "Analytics & Reporting"
     icon: "ti-bar-chart"
     image: "/images/undraw/service-analytics.svg"
-    description: "Make data usable for decisions, not just storage. Includes dashboard development, outcome reporting, and data governance frameworks."
-    link: ""
+   # description: "Make data usable for decisions, not just storage. Includes dashboard development, outcome reporting, and data governance frameworks."
+    link: "services/analytics/"
 
   - title: "AI & Custom Applications"
     icon: "ti-layers"
     image: "/images/undraw/service-ai-apps.svg"
-    description: "Purpose-built tools for complex, high-stakes work. Includes generative AI integration, document review tools, custom web applications, and RAG-based knowledge systems."
-    link: ""
+   # description: "Purpose-built tools for complex, high-stakes work. Includes generative AI integration, document review tools, custom web applications, and RAG-based knowledge systems."
+    link: "services/ai-applications/"
 
   - title: "Training & Capacity Building"
     icon: "ti-user"
     image: "/images/undraw/service-training.svg"
-    description: "Build internal capability so solutions stick. Includes staff training, workflow documentation, data literacy programs, and system onboarding."
-    link: ""
+   # description: "Build internal capability so solutions stick. Includes staff training, workflow documentation, data literacy programs, and system onboarding."
+    link: "services/training/"
 
 ################################## Service ####################################
 features:

@@ -1,0 +1,44 @@
+{{ define "main" }}
+
+<div class="wrap">
+  {{ partial "poster-nav.html" . }}
+
+  <header class="page-head">
+    <div class="crumb">
+      <a href="{{ "/" | relLangURL }}">Home</a>
+      <span class="sep">/</span>
+      {{ with .Parent }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+    </div>
+    <h1>{{ .Title }}</h1>
+    <div class="talk-meta">
+      <span class="talk-meta-date">{{ .Date.Format "January 2, 2006" }}</span>
+      {{ with .Params.tags }}
+      <span class="talk-tags inline">
+        {{ range . }}<span class="talk-tag">{{ . }}</span>{{ end }}
+      </span>
+      {{ end }}
+    </div>
+    {{ with .Params.description }}<p class="standfirst">{{ . }}</p>{{ end }}
+  </header>
+</div>
+
+<section class="talk-body-sec">
+  <div class="wrap">
+    {{/* Slide decks ship as slides.pdf beside the page bundle. */}}
+    {{ $slides := .Resources.GetMatch "slides.pdf" }}
+    {{ if $slides }}
+    <div class="slides-frame">
+      <iframe src="{{ $slides.RelPermalink }}" title="{{ .Title }} slides" loading="lazy"></iframe>
+    </div>
+    <p class="slides-fallback">
+      Slides not loading? <a href="{{ $slides.RelPermalink }}" target="_blank" rel="noopener">Open the PDF directly &#8599;</a>
+    </p>
+    {{ else }}
+    <div class="talk-content">{{ .Content }}</div>
+    {{ end }}
+  </div>
+</section>
+
+{{ partial "poster-footer.html" . }}
+
+{{ end }}

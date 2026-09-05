@@ -677,3 +677,161 @@ html.no-js .case-toggle { display: none; }
 /* Footer without the CTA (contact page) -- just the location line. */
 .footer.is-minimal { padding: 34px 0 40px; }
 .footer.is-minimal .wrap { justify-content: flex-start; }
+
+/* ============ about: long-form prose ============ */
+.prose-sec {
+  background: var(--band-services);
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  padding: 66px 0 72px;
+}
+.prose-sec .wrap { display: flex; flex-direction: column; gap: 46px; }
+.prose-block { display: grid; grid-template-columns: 1fr; gap: 14px; max-width: 68ch; }
+.prose-block h2 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(22px, 3vw, 30px); letter-spacing: -0.02em;
+  text-transform: uppercase; line-height: 1.08;
+}
+.prose-body p { font-size: 16.5px; line-height: 1.62; max-width: 66ch; }
+.prose-body p + p { margin-top: 14px; }
+
+/* ============ about: background timeline ============ */
+.bg-sec { padding: 70px 0 20px; }
+.bg-sec h2 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(24px, 3.4vw, 32px); letter-spacing: -0.02em;
+  text-transform: uppercase; margin-bottom: 26px;
+}
+.bg-list { list-style: none; }
+.bg-item {
+  display: grid; grid-template-columns: 168px 1fr; gap: 22px;
+  padding: 20px 4px;
+  border-top: 2.5px dashed rgba(33,32,28,0.28);
+  align-items: start;
+}
+.bg-item:last-child { border-bottom: 2.5px dashed rgba(33,32,28,0.28); }
+.bg-period {
+  font-family: 'Caveat', cursive; font-weight: 700; font-size: 22px;
+  color: var(--blue); line-height: 1.2; transform: rotate(-1deg);
+}
+.bg-item:nth-child(2n) .bg-period { color: var(--red); }
+.bg-item:nth-child(3n) .bg-period { color: var(--green); }
+.bg-role {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 17px; line-height: 1.25;
+}
+.bg-detail { margin-top: 5px; font-size: 15px; line-height: 1.5; max-width: 64ch; }
+
+/* ============ project / client work ============ */
+.work-sec {
+  background: var(--band-quotes);
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  padding: 60px 0 72px;
+}
+.work-count {
+  font-family: 'Caveat', cursive; font-size: 24px; font-weight: 700;
+  color: var(--red); transform: rotate(-1deg); margin-bottom: 26px;
+}
+.work-list { display: flex; flex-direction: column; }
+.work-item {
+  display: grid; grid-template-columns: 62px 1fr; gap: 20px;
+  padding: 22px 4px;
+  border-top: 2.5px solid rgba(33,32,28,0.18);
+  align-items: start;
+}
+.work-item:last-child { border-bottom: 2.5px solid rgba(33,32,28,0.18); }
+.work-num {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 15px; color: var(--ink); opacity: .38;
+  font-variant-numeric: tabular-nums; padding-top: 3px;
+}
+.work-title {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 19px; line-height: 1.22;
+}
+.work-title a { color: var(--ink); text-decoration: none; }
+.work-title a:hover { color: var(--blue); }
+.work-arrow { opacity: .4; font-size: 15px; }
+.work-body { margin-top: 7px; font-size: 15.5px; line-height: 1.52; max-width: 72ch; }
+.work-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 11px; }
+.work-tag {
+  background: rgba(45,91,227,0.1);
+  border: 1.5px solid rgba(45,91,227,0.4);
+  color: var(--blue);
+  border-radius: 3px; padding: 2px 8px;
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 12px;
+}
+
+/* ============ talks ============ */
+.talks-sec {
+  background: var(--band-process);
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  padding: 60px 0 70px;
+}
+.talk-list { list-style: none; }
+.talk-item {
+  display: grid; grid-template-columns: 118px 1fr; gap: 22px;
+  padding: 22px 4px;
+  border-top: 2.5px solid rgba(33,32,28,0.18);
+  align-items: baseline;
+}
+.talk-item:last-child { border-bottom: 2.5px solid rgba(33,32,28,0.18); }
+.talk-date { display: flex; flex-direction: column; }
+.talk-year {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 20px; font-variant-numeric: tabular-nums;
+}
+.talk-day {
+  font-family: 'Caveat', cursive; font-weight: 700; font-size: 17px;
+  color: var(--red); transform: rotate(-1deg);
+}
+.talk-title {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 20px; line-height: 1.22;
+}
+.talk-title a { color: var(--ink); text-decoration: none; border-bottom: 2.5px solid transparent; }
+.talk-title a:hover { color: var(--blue); border-bottom-color: var(--yellow); }
+.talk-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.talk-tags.inline { display: inline-flex; margin-top: 0; }
+.talk-tag {
+  background: var(--paper);
+  border: 1.5px solid rgba(33,32,28,0.4);
+  border-radius: 3px; padding: 2px 8px;
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 12px;
+}
+.talk-meta {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  margin-top: 14px;
+}
+.talk-meta-date {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700;
+  font-size: 14px; opacity: .7;
+}
+
+/* single talk: slide embed */
+.talk-body-sec { padding: 46px 0 20px; }
+.slides-frame {
+  border: 2.5px solid var(--ink); border-radius: 4px;
+  box-shadow: 6px 7px 0 rgba(33,32,28,0.16);
+  background: var(--paper);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+.slides-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+.slides-fallback { margin-top: 14px; font-size: 15px; }
+.slides-fallback a { color: var(--blue); font-weight: 700; }
+.talk-content { max-width: 70ch; }
+.talk-content p + p { margin-top: 14px; }
+
+@media (max-width: 700px) {
+  .bg-item { grid-template-columns: 1fr; gap: 6px; }
+  .work-item { grid-template-columns: 40px 1fr; gap: 14px; }
+  .talk-item { grid-template-columns: 1fr; gap: 8px; }
+  .talk-date { flex-direction: row; gap: 10px; align-items: baseline; }
+  .slides-frame { aspect-ratio: 3 / 4; }
+}
+
+/* 404 quick links */
+.more-grid.four-oh-four { margin-top: 34px; max-width: 620px; }

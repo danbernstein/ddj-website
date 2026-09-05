@@ -84,8 +84,8 @@ params:
   # Navigation button
   navigation_button:
     enable: true
-    label: "Get Started"
-    link: "contact"
+    label: "Learn More"
+    link: "#service"
 
   ############################# social site ########################
   social:
@@ -124,11 +124,13 @@ params:
       - link: "plugins/font-awesome/fontawesome.min.css"
       - link: "plugins/font-awesome/brands.css"
       - link: "plugins/font-awesome/solid.css"
+      - link: "css/custom.css"
     js:
       - link: "plugins/jquery/jquery.min.js"
       - link: "plugins/bootstrap/bootstrap.min.js"
       - link: "plugins/slick/slick.min.js"
       - link: "plugins/shuffle/shuffle.min.js"
+      - link: "js/services.js"
 
 ############################# Menus ##############################
 menus:
@@ -136,15 +138,18 @@ menus:
     - name: "Home"
       url: "/"
       weight: 1
-    - name: "About"
-      url: "#about"
-      weight: 2
     - name: "Services"
-      url: "#service"
+      url: "what-we-do/"
+      weight: 2
+    - name: "Work"
+      url: "project/"
       weight: 3
-    - name: "Clients"
-      url: "#clients"
+    - name: "Talks"
+      url: "talks/"
       weight: 4
+    - name: "About"
+      url: "about/"
+      weight: 5
    # - name: "Blog"
    #   url: "blog/"
    #   weight: 5

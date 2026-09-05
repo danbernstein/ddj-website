@@ -1,85 +1,75 @@
 ---
-title: "About Data-Driven Justice"
-description: "Learn more about our mission to help organizations leverage data for social impact"
+title: "About"
+description: "Data-Driven Justice is a small practice building data systems and software for civil justice organizations."
 draft: false
 
-################################## About #####################################
-about:
-  enable: true
-  image: "/images/ddj_logo.jpeg"
-  title: "Transforming Data Into Impact"
-  content: "Data-Driven Justice was founded to help nonprofits and small businesses transform their data into actionable insights and operational efficiency. We specialize in working with organizations that are making a difference in their communities but struggle with the technical challenges of managing data effectively.
+type: "poster"
+layout: "about"
 
-  Our approach combines deep technical expertise with sector-specific knowledge. We understand that technology should serve your mission, not complicate it. That's why we focus on building sustainable, scalable solutions that grow with your organization.
+lead: "A small practice, built around one idea: the organizations doing the hardest legal work deserve software as good as anyone else's."
 
-  Whether you need custom software development, process optimization, or data infrastructure improvements, we partner with you to deliver solutions that truly meet your needs and advance your goals."
+# Long-form sections. Each renders as a titled block.
+sections:
+  - title: "How this started"
+    body: |
+      I spent four years as a data engineer at the Legal Services Corporation, the
+      largest funder of civil legal aid in the country. I was the engineering lead on
+      the Civil Court Data Initiative — an effort to scrape, standardize, and publish
+      civil court records from more than fifty separate court systems, most of which
+      had no interest in being scraped.
 
-  # About item loop
-  about_item:
-  - icon: "fas fa-lightbulb"
-    title: "Innovation"
-    content: "We bring creative solutions to complex data challenges, always focusing on practical results."
+      What I learned there is that the data problems in civil justice are not
+      technically exotic. They are mundane, enormous, and almost entirely unstaffed.
+      An organization with six attorneys and one paralegal does not have a data team.
+      It has whoever is least afraid of spreadsheets.
 
-  - icon: "fas fa-heart"
-    title: "Mission-Driven"
-    content: "We partner with organizations making a positive impact in their communities."
+      Data-Driven Justice exists to be that missing capacity — on a contract, for as
+      long as it takes, and no longer.
 
-  - icon: "fas fa-cogs"
-    title: "Technical Excellence"
-    content: "Deep expertise across modern web technologies, cloud platforms, and data systems."
+  - title: "How engagements actually run"
+    body: |
+      Most projects start with someone describing a symptom: the grant report takes
+      three weeks, intake is a mess, nobody trusts the numbers. The first thing we do
+      is map how the work actually flows, which usually reveals that the stated
+      problem is a downstream effect of something else.
 
-################################ feature #####################################
-features:
-  enable: true
-  title: "Our Core Capabilities"
-  feature_item:
-  # feature item loop
-  - icon: "fas fa-code"
-    title: "Custom Software Development"
-    content: "Full-stack web applications, API development, and system integrations tailored to your specific needs."
+      Then we build. Sometimes that is a case management migration, sometimes an AI
+      screening pipeline, sometimes a script that eliminates eight hours of monthly
+      copy-paste. The size of the fix is set by the problem, not by what we would
+      prefer to sell.
 
-  - icon: "fas fa-cloud"
-    title: "Cloud Infrastructure"
-    content: "Strategic cloud adoption, migration, and optimization across AWS, GCP, and Azure platforms."
+      Then we leave — but only after your team can run the thing without us. That
+      means documentation, training, and a real handoff. A system that only works
+      while the consultant is on retainer is not a solution.
 
-  - icon: "fas fa-chart-bar"
-    title: "Data Analysis & Modeling"
-    content: "Statistical analysis, machine learning, and predictive modeling to drive evidence-based decisions."
+  - title: "What we won't do"
+    body: |
+      We don't take projects where the technology is a substitute for a decision
+      nobody wants to make. We don't build things we can't hand off. And we don't
+      recommend a platform migration when the actual problem is that four people
+      disagree about what a "closed case" means.
 
-  - icon: "fas fa-sitemap"
-    title: "Process Optimization"
-    content: "Workflow mapping, bottleneck identification, and automation to improve operational efficiency."
+      Sometimes the honest answer is that you don't need what you called us about.
+      We would rather tell you that in week one than bill you for six months.
 
-  - icon: "fas fa-database"
-    title: "Database Management"
-    content: "Database design, optimization, and migration to ensure your data is secure and accessible."
+background:
+  title: "Background"
+  items:
+    - period: "2021 — now"
+      role: "Founder, Data-Driven Justice"
+      detail: "Independent practice serving innocence projects, legal aid providers, housing organizations, and courts."
+    - period: "2023 — 2024"
+      role: "Software Development Engineer, Patrick J. McGovern Foundation"
+      detail: "Technical assistance to nonprofits adopting data infrastructure, cloud, and LLM tooling."
+    - period: "2019 — 2023"
+      role: "Data Engineer III, Legal Services Corporation"
+      detail: "Engineering lead on the Civil Court Data Initiative — court record collection across fifty-plus data sources, with data-sharing agreements spanning legal aid providers, municipal governments, researchers, and journalists."
+    - period: "2017 — 2019"
+      role: "Science Policy Fellow, Science & Technology Policy Institute"
+      detail: "Mixed-methods research on emerging drinking water contaminants and geothermal energy to inform federal roadmaps."
 
-  - icon: "fas fa-robot"
-    title: "AI Integration"
-    content: "Practical artificial intelligence solutions including document processing and intelligent automation."
-
-#################################### team ####################################
-team:
-  enable: false
-  title: "Our Team"
-  team_member:
-  # team member loop
-  - name: "Dan Bernstein"
-    image: "images/team/team-1.jpg"
-    designation: "Principal Consultant"
-    content: "Leading data and technology consulting for organizations making a social impact."
-    social:
-    # social site loop
-    - icon: "fab fa-github"
-      link: "https://github.com/danbernstein"
-    - icon: "fab fa-linkedin"
-      link: "https://www.linkedin.com/in/danbernstein94/"
-
-################################## clients logo slider #########################
-clients_logo_slider:
-  enable: false
-  logos:
-  - "images/clients-logo/client-logo-1.png"
-  - "images/clients-logo/client-logo-2.png"
-  - "images/clients-logo/client-logo-3.png"
+cta:
+  title: "Think we might be able to help?"
+  button_text: "Get in touch"
+  button_link: "/contact/"
 ---

@@ -1,0 +1,58 @@
+{{ define "main" }}
+
+<div class="wrap">
+  {{ partial "poster-nav.html" . }}
+
+  <header class="page-head">
+    <div class="crumb">
+      <a href="{{ "/" | relLangURL }}">Home</a>
+    </div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lead }}<p class="standfirst">{{ . }}</p>{{ end }}
+  </header>
+</div>
+
+{{ with .Params.sections }}
+<section class="prose-sec">
+  <div class="wrap">
+    {{ range $i, $s := . }}
+    <article class="prose-block">
+      <h2>{{ $s.title }}</h2>
+      <div class="prose-body">{{ $s.body | markdownify }}</div>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ with .Params.background }}
+<section class="bg-sec">
+  <div class="wrap">
+    <h2>{{ .title }}</h2>
+    <ol class="bg-list">
+      {{ range .items }}
+      <li class="bg-item">
+        <div class="bg-period">{{ .period }}</div>
+        <div>
+          <div class="bg-role">{{ .role }}</div>
+          {{ with .detail }}<p class="bg-detail">{{ . }}</p>{{ end }}
+        </div>
+      </li>
+      {{ end }}
+    </ol>
+  </div>
+</section>
+{{ end }}
+
+{{ with .Params.cta }}
+<section class="cta-sec">
+  <div class="wrap">
+    <h2>{{ .title }}</h2>
+    <a class="btn" href="{{ .button_link | relLangURL }}">{{ .button_text }}</a>
+  </div>
+</section>
+{{ end }}
+
+{{ partial "poster-footer.html" . }}
+
+{{ end }}

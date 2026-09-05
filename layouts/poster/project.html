@@ -1,0 +1,66 @@
+{{ define "main" }}
+
+<div class="wrap">
+  {{ partial "poster-nav.html" . }}
+
+  <header class="page-head">
+    <div class="crumb">
+      <a href="{{ "/" | relLangURL }}">Home</a>
+    </div>
+    <h1>{{ .Params.projects.title | default .Title }}</h1>
+    {{ with .Params.projects.subtitle }}<p class="standfirst">{{ . }}</p>{{ end }}
+  </header>
+</div>
+
+{{ with .Params.projects }}
+{{ if .enable }}
+<section class="work-sec">
+  <div class="wrap">
+    {{ $items := .project_item }}
+    <p class="work-count">{{ len $items }} organizations and counting.</p>
+
+    <div class="work-list">
+      {{ range $i, $p := $items }}
+      <article class="work-item">
+        <div class="work-num">{{ printf "%02d" (add $i 1) }}</div>
+        <div class="work-main">
+          <h2 class="work-title">
+            {{ with $p.link }}
+            <a href="{{ . }}" target="_blank" rel="noopener">{{ $p.title }} <span class="work-arrow">&#8599;</span></a>
+            {{ else }}
+            {{ $p.title }}
+            {{ end }}
+          </h2>
+          {{ with $p.content }}<p class="work-body">{{ . }}</p>{{ end }}
+          {{ with $p.services }}
+          <div class="work-tags">
+            {{ range . }}<span class="work-tag">{{ replace . "-" " " }}</span>{{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+
+{{ with .Params.cta }}
+{{ if .enable }}
+<section class="cta-sec">
+  <div class="wrap">
+    <h2>{{ .title }}</h2>
+    {{ with .button }}
+    {{ if .enable }}
+    <a class="btn" href="{{ .link | relLangURL }}">{{ .label }}</a>
+    {{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+{{ end }}
+
+{{ partial "poster-footer.html" . }}
+
+{{ end }}

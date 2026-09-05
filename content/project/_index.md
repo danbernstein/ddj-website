@@ -3,6 +3,9 @@ title: "Client Work"
 description: "Examples of projects we've completed for nonprofits and social organizations"
 draft: false
 
+type: "poster"
+layout: "project"
+
 # project
 projects:
   enable: true

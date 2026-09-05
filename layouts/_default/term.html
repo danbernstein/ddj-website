@@ -1,0 +1,43 @@
+{{ define "main" }}
+
+<div class="wrap">
+  {{ partial "poster-nav.html" . }}
+
+  <header class="page-head">
+    <div class="crumb">
+      <a href="{{ "/" | relLangURL }}">Home</a>
+    </div>
+    <h1>{{ .Title }}</h1>
+    <p class="standfirst">
+      {{ len .Pages }} {{ cond (eq (len .Pages) 1) "item" "items" }} tagged
+      &ldquo;{{ .Title }}&rdquo;.
+    </p>
+  </header>
+</div>
+
+<section class="talks-sec">
+  <div class="wrap">
+    <ol class="talk-list">
+      {{ range .Pages.ByDate.Reverse }}
+      <li class="talk-item">
+        <div class="talk-date">
+          <span class="talk-year">{{ .Date.Format "2006" }}</span>
+          <span class="talk-day">{{ .Date.Format "Jan 2" }}</span>
+        </div>
+        <div class="talk-main">
+          <h2 class="talk-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ with .Params.tags }}
+          <div class="talk-tags">
+            {{ range . }}<span class="talk-tag">{{ . }}</span>{{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </li>
+      {{ end }}
+    </ol>
+  </div>
+</section>
+
+{{ partial "poster-footer.html" . }}
+
+{{ end }}

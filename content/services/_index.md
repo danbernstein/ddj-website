@@ -7,6 +7,10 @@ draft: false
 # section is served from /what-we-do/ to avoid the collision.
 url: "/what-we-do/"
 
+# the old Bootstrap services page lived here
+aliases:
+  - /service/
+
 cascade:
   type: "poster"
   # :filename keeps the directory name (ai-applications), not the title slug.
