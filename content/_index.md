@@ -1,104 +1,200 @@
 ---
-############################### Banner ##############################
-banner:
-  enable: true
-  bg_image: "/images/data_driven_justice_banner.jpeg"
-  bg_overlay: true
-  title: "Data-Driven Justice"
-  content: "We help legal aid and social service organizations leverage data and technology to better serve their communities through strategic consulting, custom software development, and data infrastructure solutions."
-  #button:
-  #  enable: false
-  #  label: "Our Services"
-  #  link: "service/"
+title: "Data-Driven Justice"
+description: "We build software for legal aid organizations, innocence projects, and justice campaigns — custom apps, automation, AI tools, data analysis, and the data systems underneath."
+type: "poster"
+layout: "home"
 
-############################# About #################################
-about:
-  enable: true
-  title: "About Data-Driven Justice"
-  description: "Specialized consulting firm focused on helping nonprofits and small businesses transform their data into actionable insights and operational efficiency."
-  content: "We work with local and national organizations, grassroots initiatives, and government entities that struggle to bring together technology, people, and processes to make data a strategic resource for effectively delivering social services and solutions."
-  image: "/images/ddj_logo.jpeg"
+############################### Nav ##############################
+nav:
+  - name: "Services"
+    url: "#services"
+  - name: "Clients"
+    url: "#clients"
+  - name: "How it works"
+    url: "#what"
+  - name: "Who we are"
+    url: "#team"
+  - name: "Say hi"
+    url: "/contact/"
 
-######################### Portfolio ###############################
-portfolio:
-  enable: false
-  bg_image: "images/feature-bg.jpg"
-  title: "PROVEN RESULTS FOR OUR CLIENTS"
-  content: "From streamlining eviction prevention processes to building comprehensive data systems, we deliver solutions that make a real impact. Our work has helped organizations serve thousands more clients, save countless hours of manual work, and make data-driven decisions that improve outcomes.
-
-  We don't just build technology - we partner with you to understand your mission and create tools that advance your goals. Every project is designed with sustainability and growth in mind, ensuring your investment continues to pay dividends.
-
-  Ready to see what's possible when technology truly serves your mission? Let's discuss how we can help transform your organization's data capabilities."
+############################### Hero ##############################
+hero:
+  lead: "We build software for"
+  # Cycled by the shuffle animation; the first is shown without JS.
+  org_types:
+    - "legal aid organizations"
+    - "innocence projects"
+    - "justice campaigns"
+    - "housing advocates"
+    - "eviction defense attorneys"
+    - "courts"
+    - "policy researchers"
+    - "public defenders"
+  lede: "Custom apps, automation, AI tools, data analysis, and the data systems underneath."
+  lede_emphasis: "Working software, shipped to people doing the hardest work there is."
   button:
-    enable: true
-    label: "View Client Work"
-    link: "project/"
+    label: "Start a conversation"
+    link: "/contact/"
 
-############################# Service ############################
-service:
+########################### Sound familiar ##########################
+quotes:
   enable: true
-  # service content comes from "service.md" file
+  title: "Sound familiar?"
+  items:
+    - quote: "Our intake process is held together with tape and one heroic paralegal."
+      who: "— every legal aid ED"
+    - quote: "The grant report is due Friday and I can't get the numbers out."
+      who: "— development director"
+    - quote: "We type the same letter forty times a week."
+      who: "— staff attorney"
+    - quote: "Our systems don't talk to each other. At all."
+      who: "— operations manager"
+    - quote: "We have more cases than people to read them."
+      who: "— screening team"
+    - quote: "Everyone says use AI. Nobody says where to start."
+      who: "— executive director"
 
-############################# Clients ############################
+############################# Services #############################
+services:
+  enable: true
+  title: "What we do"
+  intro: "Not every organization needs the same thing. Some need a second set of eyes, some need something built, some need a team they can call after launch. Here's how the work breaks down — click a project to read the full case study."
+  groups:
+    - num: "1"
+      title: "Advise"
+      description: "Process mapping, data assessments, and system evaluations — figuring out what's actually wrong before anything gets built."
+      cases:
+        - org: "Legal aid, multi-office"
+          title: "Legal Services Intake Pathway Redesign"
+          link: "/services/process-improvement/"
+        - org: "State housing agency"
+          title: "Homeless Services Multi-Provider Benchmarking"
+          link: "/services/analytics/"
+        - org: "State housing agency"
+          title: "Homeless Services Data Ecosystem Assessment"
+          link: "/services/process-improvement/"
+        - org: "Legal services org"
+          title: "Case Acceptance & Staffing Capacity Analytics"
+          link: "/services/analytics/"
+    - num: "2"
+      title: "Build"
+      description: "Custom software, automation, AI tools, and data infrastructure — shipped to production, not left as a slide deck."
+      cases:
+        - org: "Innocence project"
+          title: "AI-Assisted Evidence Synthesis for Case Screening"
+          link: "/services/ai-applications/"
+        - org: "Housing rights org"
+          title: "Case Management Migration & Consolidation"
+          link: "/services/data-systems/"
+        - org: "Memphis nonprofit"
+          title: "Emergency Rental Assistance Infrastructure Scaling"
+          link: "/services/data-systems/"
+        - org: "Innocence project"
+          title: "Criminal Case Management Workflow Integration"
+          link: "/services/automation/"
+    - num: "3"
+      title: "Maintain"
+      description: "Training, documentation, and fractional support so your team can run what we built — long after the project ends."
+      cases:
+        - org: "Social service nonprofit"
+          title: "Upskilling a Non-Profit Data Team"
+          link: "/services/training/"
+        - org: "Legal services org"
+          title: "SharePoint Organization & Document Management Training"
+          link: "/services/training/"
+
+############################# Clients #############################
 clients:
   enable: true
-  title: "Our Clients"
-  subtitle: "We proudly support legal aid, social services, and local and national advocacy organizations"
+  title: "Who we've worked with"
+  intro: "Legal aid providers, innocence projects, housing organizations, courts, foundations, and government agencies."
+  # Ordered by recognition, then loosely by sector.
+  items:
+    - name: "American Civil Liberties Union (ACLU)"
+      link: "https://www.aclu.org/"
+    - name: "Mid-Atlantic Innocence Project"
+      link: "https://exonerate.org/"
+    - name: "Connecticut Department of Housing"
+      link: "https://portal.ct.gov/doh"
+    - name: "Indiana Legal Services"
+      link: "https://www.indianalegalservices.org/"
+    - name: "Law Center for Better Housing"
+      link: "https://lcbh.org/"
+    - name: "Community Legal Services of Mid-Florida"
+      link: "https://www.legalaccessforall.org/"
+    - name: "Children's Law Center"
+      link: "https://childrenslawcenter.org/"
+    - name: "Abolitionist Law Center"
+      link: "https://abolitionistlawcenter.org/resource/probation-in-allegheny-county/"
+    - name: "Colorado Freedom Fund"
+      link: "https://www.coloradofreedomfund.org/"
+    - name: "Civil Justice Inc."
+      link: "https://civiljusticeinc.org/"
+    - name: "Just City"
+      link: "https://www.justcity.org/"
+    - name: "Innovate Memphis"
+      link: "https://innovatememphis.com/"
+    - name: "Data Midsouth"
+      link: "https://innovatememphis.com/"
+    - name: "The Works, Inc."
+      link: "https://theworkscdc.org/"
+    - name: "Hester Street Collaborative"
+      link: "https://hesterstreet.org/projects/nypd-out-of-mental-health/"
+    - name: "Arab American Association of New York"
+      link: "https://www.arabamericanny.org/"
+    - name: "We of Action Virginia"
+      link: "https://wofava.org/"
+    - name: "HopeWorks"
+      link: "https://www.whyhopeworks.org/"
+    - name: "Alliance for a Healthier Generation"
+      link: "https://www.healthiergeneration.org/"
+    - name: "Root Change"
+      link: "https://rootchange.org/"
+    - name: "Interamerican Development Bank"
+      link: "http://idbg.org/"
+    - name: "New Editions"
+      link: "https://www.neweditions.net/"
+    - name: "Saint Anselm's College"
+      link: "https://www.anselm.edu/"
 
-############################ call to action ###########################
-cta:
+############################ How it works ###########################
+process:
   enable: true
-  bg_image: "images/call-to-action-bg.jpg"
-  title: "Ready to transform your data strategy?"
-  content: "Let's discuss how we can help your organization leverage data and technology to better serve your community. From process mapping to custom software development, we're here to help you succeed."
-  button:
-    enable: true
-    label: "Get Started Today"
-    link: "contact/"
+  title: "How this works"
+  intro: "You don't need to know what you need. That's our job. Every engagement runs the same three stages."
+  steps:
+    - num: "1"
+      title: "Figure out what's actually wrong"
+      description: "We map how work really flows through your organization before touching any tools. Often the problem isn't what you think it is — and diagnosis is the first deliverable."
+    - num: "2"
+      title: "Build the fix"
+      description: "Sometimes that's automation. Sometimes it's a custom app, a data cleanup, or an AI tool. We build whatever the problem actually needs, to production standards — not whatever we felt like selling."
+    - num: "3"
+      title: "Make it stick"
+      description: "Training, documentation, and a real handoff. We don't leave until your team can run it without us."
 
-############################# Funfacts ###############################
-funfacts:
-  enable: false
-  title: "Our Impact"
-  description: "Real results for organizations making a difference in their communities."
-  funfact_item:
-  # funfacts item loop
-  - icon: "fas fa-users"
-    name: "Organizations Served"
-    count: "25"
+############################### Team ###############################
+team:
+  enable: true
+  title: "Who you'll work with"
+  description: "Data-Driven Justice is deliberately small. The person who scopes your project is the person who builds it, and the person you email is the person who picks up. When a project needs more hands, we bring in specialists we've worked with before — but you never get handed off to someone who wasn't in the room."
+  members:
+    - name: "Dan Bernstein"
+      role: "Founder · Data & Software"
+      # Drop a headshot in static/images/ and set photo: "/images/your-file.jpg"
+      photo: ""
+      initials: "DB"
+      bio: "Ten years building data systems for civil justice. Engineering lead on the Legal Services Corporation's Civil Court Data Initiative, scraping and standardizing civil court records from fifty-plus sources. Before that, technical assistance to nonprofits at the Patrick J. McGovern Foundation. Since 2021, independent work with innocence projects, legal aid providers, and housing organizations."
+      links:
+        - label: "LinkedIn"
+          url: "https://www.linkedin.com/in/danbernstein94/"
+        - label: "GitHub"
+          url: "https://github.com/danbernstein"
 
-  # funfacts item loop
-  - icon: "fas fa-code"
-    name: "Custom Solutions Built"
-    count: "50"
-
-  # funfacts item loop
-  - icon: "fas fa-database"
-    name: "Data Systems Optimized"
-    count: "15"
-
-  # funfacts item loop
-  - icon: "fas fa-chart-line"
-    name: "Process Improvements"
-    count: "100"
-
-  testimonial_slider:
-  # testimonial item loop
-  - name: "Client Testimonial"
-    image: "images/clients/avater-1.jpg"
-    designation: "Nonprofit Leader"
-    content: "Data-Driven Justice helped us build systems that saved thousands of hours of manual work and allowed us to serve our community more effectively."
-
-  # testimonial item loop
-  - name: "Project Partner"
-    image: "images/clients/avater-2.jpg"
-    designation: "Program Director"
-    content: "Their technical expertise combined with deep understanding of our sector made all the difference. They delivered exactly what we needed."
-
-  # testimonial item loop
-  - name: "Technology Director"
-    image: "images/clients/avater-3.jpg"
-    designation: "Legal Aid Organization"
-    content: "Professional, responsive, and delivered results that transformed how we manage our data and serve our clients."
-
+############################## Footer ##############################
+footer:
+  headline_lead: "Got something"
+  headline_circled: "worth building?"
+  headline_tail: "Let's talk."
+  location: "Based in Northern Virginia. Working nationwide."
 ---

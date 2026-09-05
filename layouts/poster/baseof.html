@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default `en-US` }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title | default site.Title }}</title>
+  <meta name="description" content="{{ .Params.Description | default site.Params.description }}">
+
+  {{ with site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+
+  <!-- favicon -->
+  {{ $favicon := site.Params.favicon }}
+  {{ if $favicon }}
+  {{ if fileExists (add `assets/` $favicon) }}
+  {{ $f := resources.Get $favicon }}
+  {{ $f32 := $f.Resize "32x png" }}
+  {{ $f180 := $f.Resize "180x png" }}
+  <link rel="icon" href="{{ $f32.RelPermalink }}" type="image/png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ $f180.RelPermalink }}">
+  {{ end }}
+  {{ end }}
+
+  <!-- open graph -->
+  {{ template "_internal/opengraph.html" . }}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Caveat:wght@500;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+
+  {{ $poster := resources.Get "css/poster.css" }}
+  {{ if hugo.IsProduction }}
+  {{ $poster = $poster | minify | fingerprint }}
+  {{ end }}
+  <link rel="stylesheet" href="{{ $poster.RelPermalink }}">
+
+  <!-- google analytics -->
+  {{ template "_internal/google_analytics.html" . }}
+</head>
+
+<body class="ddj">
+  {{ block "main" . }}{{ end }}
+
+  {{ $js := resources.Get "js/poster.js" }}
+  {{ if hugo.IsProduction }}
+  {{ $js = $js | minify | fingerprint }}
+  {{ end }}
+  <script src="{{ $js.RelPermalink }}" defer></script>
+</body>
+
+</html>
