@@ -61,3 +61,18 @@
     if (current) box.style.width = measureWidth(words[idx]) + 'px';
   });
 })();
+
+// Case-study accordions on service pages. The first is open in the markup,
+// so the page still reads with JS off -- this only adds toggling.
+(function () {
+  var list = document.querySelector('.case-list');
+  if (!list) return;
+
+  list.addEventListener('click', function (e) {
+    var head = e.target.closest('.case-head');
+    if (!head) return;
+    var card = head.closest('.case');
+    var open = card.classList.toggle('is-open');
+    head.setAttribute('aria-expanded', String(open));
+  });
+})();

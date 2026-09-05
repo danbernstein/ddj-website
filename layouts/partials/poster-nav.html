@@ -1,0 +1,20 @@
+{{ $home := site.Home }}
+<nav class="nav">
+  <div class="logo">
+    {{ if .IsHome }}
+    {{ site.Params.logo_text | default site.Title }}<span class="dot">.</span>
+    {{ else }}
+    <a href="{{ $home.RelPermalink }}">{{ site.Params.logo_text | default site.Title }}<span class="dot">.</span></a>
+    {{ end }}
+  </div>
+  <div class="nav-links">
+    {{ range $home.Params.nav }}
+    {{ $url := .url }}
+    {{/* In-page anchors only work on the homepage; elsewhere point back to it. */}}
+    {{ if and (hasPrefix $url "#") (not $.IsHome) }}
+    {{ $url = printf "%s%s" $home.RelPermalink $url }}
+    {{ end }}
+    <a href="{{ $url }}">{{ .name }}</a>
+    {{ end }}
+  </div>
+</nav>

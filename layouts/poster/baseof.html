@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ site.LanguageCode | default `en-US` }}">
+<html lang="{{ site.LanguageCode | default `en-US` }}" class="no-js">
 
 <head>
   <meta charset="utf-8">
+  <script>document.documentElement.classList.remove('no-js');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Title | default site.Title }}</title>
   <meta name="description" content="{{ .Params.Description | default site.Params.description }}">

@@ -1,14 +1,7 @@
 {{ define "main" }}
 
 <div class="wrap">
-  <nav class="nav">
-    <div class="logo">{{ site.Params.logo_text | default site.Title }}<span class="dot">.</span></div>
-    <div class="nav-links">
-      {{ range .Params.nav }}
-      <a href="{{ .url }}">{{ .name }}</a>
-      {{ end }}
-    </div>
-  </nav>
+  {{ partial "poster-nav.html" . }}
 
   {{ with .Params.hero }}
   <header class="hero">
@@ -157,28 +150,6 @@
 {{ end }}
 {{ end }}
 
-{{ with .Params.footer }}
-<footer class="footer" id="contact">
-  <div class="wrap">
-    <div class="big">
-      {{ .headline_lead }}
-      <span class="circ">
-        {{ .headline_circled }}
-        <svg viewBox="0 0 120 50" preserveAspectRatio="none" aria-hidden="true">
-          <path
-            d="M12 27 C 8 10, 48 4, 74 6 C 102 8, 116 16, 112 28 C 108 41, 72 47, 44 45 C 20 43, 8 37, 14 22"
-            fill="none" stroke="var(--red)" stroke-width="3.5" stroke-linecap="round" />
-        </svg>
-      </span>
-      <br>
-      {{ .headline_tail }}
-    </div>
-    <div class="loc">
-      {{ partial "virginia-icon.html" . }}
-      <span class="loc-text">{{ .location }}</span>
-    </div>
-  </div>
-</footer>
-{{ end }}
+{{ partial "poster-footer.html" . }}
 
 {{ end }}

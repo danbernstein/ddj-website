@@ -1,0 +1,111 @@
+{{ define "main" }}
+
+<div class="wrap">
+  {{ partial "poster-nav.html" . }}
+
+  <header class="page-head">
+    <div class="crumb">
+      <a href="{{ "/" | relLangURL }}">Home</a>
+      <span class="sep">/</span>
+      {{ with .Parent }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+    </div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.description }}
+    <p class="standfirst">
+      {{ . }}
+      {{ with $.Params.standfirst_emphasis }}<b>{{ . }}</b>{{ end }}
+    </p>
+    {{ end }}
+    {{ with .Params.stage }}
+    <div class="stage-tag" data-stage="{{ .num }}">
+      <span class="n">{{ .num }}</span>
+      <span class="t">This is {{ .name }} work</span>
+    </div>
+    {{ end }}
+  </header>
+</div>
+
+{{ with .Params.case_studies }}
+<section class="cases-sec">
+  <div class="wrap">
+    <h2>{{ $.Params.cases_title | default "What this looked like" }}</h2>
+    {{ with $.Params.cases_intro }}<p class="sec-intro">{{ . }}</p>{{ end }}
+
+    <div class="case-list">
+      {{ range $i, $c := . }}
+      <article class="case{{ if eq $i 0 }} is-open{{ end }}">
+        <button class="case-head" aria-expanded="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
+          <span class="case-num">{{ add $i 1 }}</span>
+          <span class="case-title">{{ $c.title }}</span>
+          <span class="case-toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="case-body">
+          {{ with $c.challenge }}
+          <div class="case-block challenge">
+            <div class="block-label">The problem</div>
+            <p class="challenge-text">{{ . }}</p>
+          </div>
+          {{ end }}
+
+          {{ with $c.solution }}
+          <div class="case-block solution">
+            <div class="block-label">What we did</div>
+            <ol class="solution-steps">
+              {{ range . }}<li>{{ . }}</li>{{ end }}
+            </ol>
+          </div>
+          {{ end }}
+
+          {{ with $c.results }}
+          <div class="case-block results">
+            <div class="block-label">What changed</div>
+            <ul class="results-list">
+              {{ range . }}<li>{{ .text | safeHTML }}</li>{{ end }}
+            </ul>
+          </div>
+          {{ end }}
+
+          {{ with $c.technologies }}
+          <div class="tech-stack">
+            <div class="block-label">Built with</div>
+            <div class="tech-chips">
+              {{ range split . "," }}
+              {{ with trim . " " }}<span class="tech-chip">{{ . }}</span>{{ end }}
+              {{ end }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ $others := where (where site.RegularPages "Section" "services") "Permalink" "ne" .Permalink }}
+{{ with $others }}
+<div class="wrap">
+  <section class="more-sec">
+    <h2>Other things we do</h2>
+    <div class="more-grid">
+      {{ range . }}
+      <a href="{{ .RelPermalink }}">{{ .Title }}<span class="arrow">&#8599;</span></a>
+      {{ end }}
+    </div>
+  </section>
+</div>
+{{ end }}
+
+{{ with .Params.cta }}
+<section class="cta-sec">
+  <div class="wrap">
+    <h2>{{ .title }}</h2>
+    <a class="btn" href="{{ .button_link | relLangURL }}">{{ .button_text }}</a>
+  </div>
+</section>
+{{ end }}
+
+{{ partial "poster-footer.html" . }}
+
+{{ end }}
