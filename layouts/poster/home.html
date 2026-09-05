@@ -135,7 +135,7 @@
       {{ $lg := $photo.Resize "192x webp q82" }}
       <img class="team-photo-img" src="{{ $sm.RelPermalink }}"
         srcset="{{ $sm.RelPermalink }} 1x, {{ $lg.RelPermalink }} 2x"
-        width="76" height="76" alt="{{ .name }}" loading="lazy">
+        width="76" height="76" alt="{{ .name }}">
       {{ else }}
       <div class="team-photo" aria-hidden="true">{{ .initials }}</div>
       {{ end }}
