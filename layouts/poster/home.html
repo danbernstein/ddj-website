@@ -128,8 +128,14 @@
     </div>
     {{ range .members }}
     <div class="team-card">
-      {{ if .photo }}
-      <img class="team-photo-img" src="{{ .photo | relURL }}" alt="{{ .name }}">
+      {{ $photo := "" }}
+      {{ with .photo }}{{ $photo = resources.Get . }}{{ end }}
+      {{ if $photo }}
+      {{ $sm := $photo.Resize "96x webp q82" }}
+      {{ $lg := $photo.Resize "192x webp q82" }}
+      <img class="team-photo-img" src="{{ $sm.RelPermalink }}"
+        srcset="{{ $sm.RelPermalink }} 1x, {{ $lg.RelPermalink }} 2x"
+        width="76" height="76" alt="{{ .name }}" loading="lazy">
       {{ else }}
       <div class="team-photo" aria-hidden="true">{{ .initials }}</div>
       {{ end }}

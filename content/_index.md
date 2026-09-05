@@ -181,8 +181,8 @@ team:
   members:
     - name: "Dan Bernstein"
       role: "Founder · Data & Software"
-      # Drop a headshot in static/images/ and set photo: "/images/your-file.jpg"
-      photo: ""
+      # resolved through Hugo's asset pipeline from assets/
+      photo: "images/dan-bernstein.jpg"
       initials: "DB"
       bio: "Ten years building data systems for civil justice. Engineering lead on the Legal Services Corporation's Civil Court Data Initiative, scraping and standardizing civil court records from fifty-plus sources. Before that, technical assistance to nonprofits at the Patrick J. McGovern Foundation. Since 2021, independent work with innocence projects, legal aid providers, and housing organizations."
       links:
