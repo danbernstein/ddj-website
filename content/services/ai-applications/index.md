@@ -58,6 +58,6 @@ case_studies:
 cta:
   title: "Want to see what AI can do for you?"
   #description: "AI isn't a replacement for judgment—it's a tool to help your specialists do more meaningful work. We build systems that scale what your experts know."
-  button_text: "Let's Discuss Opportunities →"
+  button_text: "Get in touch"
   button_link: "/contact"
 ---

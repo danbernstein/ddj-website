@@ -57,6 +57,6 @@ case_studies:
 cta:
   title: "Map Your Operations. Find Your Leverage Points."
   description: "Most organizations know something feels inefficient. We help you see exactly where, why, and what to fix first."
-  button_text: "Start the Conversation →"
+  button_text: "Get in touch"
   button_link: "/contact"
 ---

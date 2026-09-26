@@ -181,6 +181,6 @@ cta:
   content: "Every project we take on is designed to advance your mission and improve your impact. Let's discuss how we can help you achieve your goals."
   button:
     enable: true
-    label: "Start Your Project"
+    label: "Get in touch"
     link: "contact/"
 ---

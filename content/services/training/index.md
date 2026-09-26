@@ -57,6 +57,6 @@ case_studies:
 cta:
   title: "Build Systems Your Team Can Manage"
  # description: "Good technology should make your team stronger, not dependent. We document, train, and build knowledge so you can evolve systems on your own."
-  button_text: "Strengthen Your Team →"
+  button_text: "Get in touch"
   button_link: "/contact"
 ---

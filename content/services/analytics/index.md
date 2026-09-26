@@ -57,6 +57,6 @@ case_studies:
 cta:
   title: "Let Your Data Tell the Story"
   description: "You're already collecting the data. We help you understand what it's actually saying—and what it means for your organization."
-  button_text: "Start Building Insight →"
+  button_text: "Get in touch"
   button_link: "/contact"
 ---

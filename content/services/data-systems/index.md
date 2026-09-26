@@ -76,6 +76,6 @@ case_studies:
 cta:
   title: "Build Infrastructure That Scales With You"
   description: "The right data foundation frees your staff from manual work and gives leadership visibility. We design systems for growth."
-  button_text: "Assess Your Infrastructure →"
+  button_text: "Get in touch"
   button_link: "/contact"
 ---
