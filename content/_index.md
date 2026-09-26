@@ -177,7 +177,7 @@ process:
 team:
   enable: true
   title: "Who you'll work with"
-  description: "Data-Driven Justice is deliberately small. The person who scopes your project is the person who builds it, and the person you email is the person who picks up. When a project needs more hands, we bring in specialists we've worked with before — but you never get handed off to someone who wasn't in the room."
+  description: "We bring in data analysts, design strategists, and researchers as needed — capable of helping with anything you need."
   members:
     - name: "Dan Bernstein"
       role: "Founder · Data & Software"
