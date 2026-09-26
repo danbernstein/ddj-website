@@ -74,7 +74,7 @@ case_studies:
     technologies: "Intake process mapping, stakeholder interviews, workflow design, decision tree development, staff training documentation"
 
 cta:
-  title: "Build Infrastructure That Scales With You"
+  title: "Build Solutions That Actually Solve Problems"
   description: "The right data foundation frees your staff from manual work and gives leadership visibility. We design systems for growth."
   button_text: "Get in touch"
   button_link: "/contact"
