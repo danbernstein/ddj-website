@@ -61,7 +61,7 @@ params:
   image: "/images/ddj_logo.jpeg"
   # contact info
   phone: ""
-  email: "danbernstein94@gmail.com"
+  email: "dan@datadrivenjustice.io"
   location: |
     4503 28th Rd S
     Arlington, VA 22206
@@ -73,7 +73,7 @@ params:
       enable: true
       use_netlify: true
       use_recaptcha: false
-      action: "mailto:danbernstein94@gmail.com"
+      action: "mailto:dan@datadrivenjustice.io"
       success_image: "images/paper-plane.svg"
 
   # Preloader

@@ -29,7 +29,7 @@ contact_info:
   address:
     - icon: "fas fa-envelope"
       title: "Email"
-      content: "danbernstein94@gmail.com"
+      content: "dan@datadrivenjustice.io"
 
   #  - icon: "fas fa-map-marker-alt"
   #    title: "Service Area"
