@@ -375,22 +375,16 @@ body.ddj {
 }
 .page-head .standfirst b { font-weight: 700; }
 
-/* the three stages this service sits in */
+/* the "some call us data wizards" tag on service pages */
 .stage-tag {
-  display: inline-flex; align-items: baseline; gap: 9px;
+  display: inline-flex; align-items: center; gap: 9px;
   margin-top: 26px;
   background: var(--yellow); border: 2.5px solid var(--ink);
-  border-radius: 999px; padding: 7px 17px 7px 13px;
+  border-radius: 999px; padding: 6px 17px 6px 12px;
   transform: rotate(-1deg);
   box-shadow: 3px 3px 0 rgba(28,52,80,0.2);
 }
-.stage-tag .n {
-  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 15px;
-  color: var(--blue); line-height: 1;
-}
-/* match the homepage's Advise / Build / Maintain colors */
-.stage-tag[data-stage="2"] .n { color: var(--red); }
-.stage-tag[data-stage="3"] .n { color: var(--green); }
+.stage-tag .wizard-hat { width: 22px; height: 22px; flex-shrink: 0; }
 .stage-tag .t {
   font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
   font-size: 13.5px; text-transform: uppercase; letter-spacing: 0.04em;

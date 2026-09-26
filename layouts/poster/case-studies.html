@@ -16,12 +16,15 @@
       {{ with $.Params.standfirst_emphasis }}<b>{{ . }}</b>{{ end }}
     </p>
     {{ end }}
-    {{ with .Params.stage }}
-    <div class="stage-tag" data-stage="{{ .num }}">
-      <span class="n">{{ .num }}</span>
-      <span class="t">This is {{ .name }} work</span>
+    <div class="stage-tag">
+      <svg class="wizard-hat" viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M24 4 L38 34 L10 34 Z" fill="var(--blue)" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round" />
+        <ellipse cx="24" cy="35" rx="17" ry="4" fill="var(--blue)" stroke="var(--ink)" stroke-width="2" />
+        <circle cx="27" cy="16" r="2" fill="var(--red)" />
+        <path d="M18 24 L21 20 L24 24 L27 19 L30 24" fill="none" stroke="var(--red)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <span class="t">Some call us data wizards</span>
     </div>
-    {{ end }}
   </header>
 </div>
 
