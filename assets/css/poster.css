@@ -7,6 +7,8 @@
   --red: #B4552A;
   --yellow: #E3B7A2;
   --green: #3E5670;
+  /* darker orange tint for button/input drop-shadows only -- --yellow reads too pale there */
+  --shadow-accent: #BE6C47;
 
   /* section grounds — tinted from the palette, not neutral greys */
   --band-quotes: #F2E9E2;
@@ -67,7 +69,7 @@ body.ddj {
 }
 .hero-shuffle-word {
   position: absolute; left: 0; top: 0;
-  color: var(--blue);
+  color: var(--red);
   white-space: nowrap;
   opacity: 0; transform: translateY(55%);
   transition: opacity .4s ease, transform .4s ease;
@@ -80,7 +82,7 @@ body.ddj {
 .hero .lede {
   margin-top: 26px; font-size: 19px; max-width: 52ch;
 }
-.hero .lede b { background: linear-gradient(transparent 58%, var(--yellow) 58%); font-weight: 700; }
+.hero .lede b { font-weight: 700; }
 .cta-row { display: flex; align-items: center; gap: 22px; margin-top: 34px; flex-wrap: wrap; }
 .btn {
   font-family: 'Bricolage Grotesque', sans-serif;
@@ -89,11 +91,11 @@ body.ddj {
   padding: 14px 26px; border: none; cursor: pointer;
   border-radius: 999px;
   transform: rotate(-1deg);
-  box-shadow: 3px 3px 0 var(--yellow);
+  box-shadow: 3px 3px 0 var(--shadow-accent);
   transition: transform .12s ease;
   display: inline-block; text-decoration: none;
 }
-.btn:hover { transform: rotate(-1deg) translate(-2px,-2px); box-shadow: 5px 5px 0 var(--yellow); }
+.btn:hover { transform: rotate(-1deg) translate(-2px,-2px); box-shadow: 5px 5px 0 var(--shadow-accent); }
 
 /* ---------- sound familiar: speech bubbles ---------- */
 .builds {
@@ -371,7 +373,7 @@ body.ddj {
 .page-head .standfirst {
   margin-top: 20px; font-size: 19px; max-width: 56ch;
 }
-.page-head .standfirst b { background: linear-gradient(transparent 58%, var(--yellow) 58%); font-weight: 700; }
+.page-head .standfirst b { font-weight: 700; }
 
 /* the three stages this service sits in */
 .stage-tag {
@@ -609,7 +611,7 @@ html.no-js .case-toggle { display: none; }
 .field textarea:focus {
   outline: none;
   border-color: var(--blue);
-  box-shadow: 3px 3px 0 var(--yellow);
+  box-shadow: 3px 3px 0 var(--shadow-accent);
 }
 .contact-form-card .btn { margin-top: 26px; }
 
