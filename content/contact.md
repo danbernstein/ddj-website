@@ -46,7 +46,6 @@ office:
   office_list:
   # office item loop
   - city: "Remote"
-    address: "4503 28th Rd S, Arlington, VA 22206"
 ---
 
 ## Ready to Get Started?

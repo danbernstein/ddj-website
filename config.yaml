@@ -62,9 +62,6 @@ params:
   # contact info
   phone: ""
   email: "dan@datadrivenjustice.io"
-  location: |
-    4503 28th Rd S
-    Arlington, VA 22206
   # copyright
   copyright: "© 2025 Data-Driven Justice. All rights reserved."
 
