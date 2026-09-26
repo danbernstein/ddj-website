@@ -321,20 +321,8 @@ body.ddj {
 .team-links a:hover { color: var(--red); border-bottom-color: var(--red); }
 
 /* ---------- footer ---------- */
-.footer { padding: 60px 0 50px; }
-.footer .wrap { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 26px; }
-.footer .big {
-  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
-  font-size: clamp(26px, 4vw, 38px); text-transform: uppercase; letter-spacing: -0.02em;
-  line-height: 1.28; max-width: 24ch;
-}
-.footer .big .circ { position: relative; white-space: nowrap; display: inline-block; }
-.footer .big .circ svg {
-  position: absolute; left: -7%; top: 50%;
-  transform: translateY(-50%);
-  width: 114%; height: 150%;
-  overflow: visible; pointer-events: none;
-}
+.footer { padding: 34px 0 40px; }
+.footer .wrap { display: flex; justify-content: flex-start; align-items: flex-end; flex-wrap: wrap; gap: 26px; }
 .footer .loc {
   font-size: 15px; opacity: .85;
   display: flex; align-items: center; gap: 12px;
@@ -674,10 +662,6 @@ html.no-js .case-toggle { display: none; }
   .field-row .field + .field { margin-top: 20px; }
   .contact-form-card { padding: 24px 20px 26px; }
 }
-
-/* Footer without the CTA (contact page) -- just the location line. */
-.footer.is-minimal { padding: 34px 0 40px; }
-.footer.is-minimal .wrap { justify-content: flex-start; }
 
 /* ============ about: long-form prose ============ */
 .prose-sec {

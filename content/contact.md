@@ -6,8 +6,6 @@ draft: false
 type: "poster"
 layout: "contact"
 
-# this page is the CTA; no need to repeat it in the footer
-hide_footer_cta: true
 
 ################################## Contact ####################################
 contact:

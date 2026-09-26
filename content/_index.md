@@ -193,8 +193,5 @@ team:
 
 ############################## Footer ##############################
 footer:
-  headline_lead: "Got something"
-  headline_circled: "worth building?"
-  headline_tail: "Let's talk."
   location: "Based in Northern Virginia. Working nationwide."
 ---
