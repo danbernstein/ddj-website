@@ -184,7 +184,7 @@ team:
       # resolved through Hugo's asset pipeline from assets/
       photo: "images/dan-bernstein.jpg"
       initials: "DB"
-      bio: "Ten years building data systems for civil justice. Engineering lead on the Legal Services Corporation's Civil Court Data Initiative, scraping and standardizing civil court records from fifty-plus sources. Before that, technical assistance to nonprofits at the Patrick J. McGovern Foundation. Since 2021, independent work with innocence projects, legal aid providers, and housing organizations."
+      bio: "Eight years building data systems for civil justice. Engineering lead on the Legal Services Corporation's Civil Court Data Initiative, scraping and standardizing civil court records from fifty-plus sources. Before that, technical assistance to nonprofits at the Patrick J. McGovern Foundation. Since 2021, independent work with innocence projects, legal aid providers, and housing organizations."
       links:
         - label: "LinkedIn"
           url: "https://www.linkedin.com/in/danbernstein94/"
