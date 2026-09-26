@@ -17,16 +17,10 @@ contact:
 contact_form:
   enable: true
   title: "Get in touch"
-  subtitle: "Have a project in mind? Send a message and we'll respond within 48 hours."
+  subtitle: "Have a project in mind? Send a message and we'll respond within 72 hours."
 
 # shown in the side column
-expect:
-  - title: "We read it"
-    description: "A real person, usually within a day or two."
-  - title: "A short call"
-    description: "We talk through what's going on. No pitch deck."
-  - title: "A written scope"
-    description: "What we'd do, what it costs, how long it takes."
+response_time: "We will get back to you within 72 hours."
 
 # contact info
 contact_info:

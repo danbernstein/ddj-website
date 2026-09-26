@@ -82,14 +82,9 @@
       </div>
       {{ end }}
 
-      {{ with .Params.expect }}
-      <div class="side-block expect">
-        <div class="block-label">What happens next</div>
-        <ol class="expect-steps">
-          {{ range . }}
-          <li><strong>{{ .title }}</strong>{{ with .description }} — {{ . }}{{ end }}</li>
-          {{ end }}
-        </ol>
+      {{ with .Params.response_time }}
+      <div class="side-block">
+        <p class="response-time">{{ . }}</p>
       </div>
       {{ end }}
     </aside>
