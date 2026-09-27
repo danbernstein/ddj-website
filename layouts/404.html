@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default `en-US` }}" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <script>document.documentElement.classList.remove('no-js');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found</title>
+  <meta name="robots" content="noindex,follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+  {{ $poster := resources.Get "css/poster.css" }}
+  {{ if hugo.IsProduction }}{{ $poster = $poster | minify | fingerprint }}{{ end }}
+  <link rel="stylesheet" href="{{ $poster.RelPermalink }}">
+</head>
+
+<body class="ddj">
+  <div class="wrap">
+    {{ partial "poster-nav.html" . }}
+
+    <header class="page-head sent-head">
+      <h1>That page isn't here</h1>
+      <p class="standfirst">
+        The link may be old, or we may have moved something. The work is all still
+        around — try one of these.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href="{{ "/" | relLangURL }}">Homepage</a>
+      </div>
+      <div class="more-grid four-oh-four">
+        <a href="{{ "/contact/" | relLangURL }}">Get in touch<span class="arrow">&#8599;</span></a>
+      </div>
+    </header>
+  </div>
+
+  {{ partial "poster-footer.html" . }}
+</body>
+
+</html>

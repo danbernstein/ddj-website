@@ -1,21 +1,26 @@
 ---
-title: "Contact Us"
+title: "Contact"
 description: "Get in touch with Data-Driven Justice to discuss your project"
 draft: false
 
+type: "poster"
 layout: "contact"
+
 
 ################################## Contact ####################################
 contact:
   enable: true
-  title: "Ready to Transform Your Data Strategy?"
-  subtitle: "Let's discuss how we can help your organization succeed"
+  title: "Let's talk"
+  subtitle: "Tell us what's not working. You don't need to know what you need — figuring that out is the first part of the job."
 
 # contact form
 contact_form:
   enable: true
-  title: "Get In Touch"
-  subtitle: "Have a project in mind? Send us a message and we'll respond within 48 hours."
+  title: "Get in touch"
+  subtitle: "Have a project in mind? Send a message and we'll respond within 72 hours."
+
+# shown in the side column
+response_time: "We will get back to you within 72 hours."
 
 # contact info
 contact_info:
@@ -24,7 +29,7 @@ contact_info:
   address:
     - icon: "fas fa-envelope"
       title: "Email"
-      content: "danbernstein94@gmail.com"
+      content: "dan@datadrivenjustice.io"
 
   #  - icon: "fas fa-map-marker-alt"
   #    title: "Service Area"
@@ -41,7 +46,6 @@ office:
   office_list:
   # office item loop
   - city: "Remote"
-    address: "4503 28th Rd S, Arlington, VA 22206"
 ---
 
 ## Ready to Get Started?

@@ -1,0 +1,11 @@
+{{ $f := site.Home.Params.footer }}
+{{ with $f }}
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div class="loc">
+      {{ partial "virginia-icon.html" . }}
+      <span class="loc-text">{{ .location }}</span>
+    </div>
+  </div>
+</footer>
+{{ end }}

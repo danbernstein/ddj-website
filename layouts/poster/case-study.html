@@ -1,0 +1,96 @@
+{{ define "main" }}
+
+<div class="wrap">
+  {{ partial "poster-nav.html" . }}
+
+  <header class="page-head">
+    <div class="crumb">
+      <a href="{{ "/" | relLangURL }}">Home</a>
+      <span class="sep">/</span>
+      {{ with .Parent }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+    </div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.org }}<p class="standfirst"><b>{{ . }}</b></p>{{ end }}
+    {{ with .Params.stage }}
+    <div class="stage-tag" data-stage="{{ .num }}">
+      <span class="n">{{ .num }}</span>
+      <span class="t">{{ .name }}</span>
+    </div>
+    {{ end }}
+  </header>
+</div>
+
+<section class="cases-sec">
+  <div class="wrap">
+    <div class="case-list">
+      <article class="case is-open single-case">
+        <div class="case-body">
+          {{ with .Params.challenge }}
+          <div class="case-block challenge">
+            <div class="block-label">The problem</div>
+            <p class="challenge-text">{{ . }}</p>
+          </div>
+          {{ end }}
+
+          {{ with .Params.solution }}
+          <div class="case-block solution">
+            <div class="block-label">What we did</div>
+            <ol class="solution-steps">
+              {{ range . }}<li>{{ . }}</li>{{ end }}
+            </ol>
+          </div>
+          {{ end }}
+
+          {{ with .Params.results }}
+          <div class="case-block results">
+            <div class="block-label">What changed</div>
+            <ul class="results-list">
+              {{ range . }}<li>{{ .text | safeHTML }}</li>{{ end }}
+            </ul>
+          </div>
+          {{ end }}
+
+          {{ with .Params.technologies }}
+          <div class="tech-stack">
+            <div class="block-label">Built with</div>
+            <div class="tech-chips">
+              {{ range split . "," }}
+              {{ with trim . " " }}<span class="tech-chip">{{ . }}</span>{{ end }}
+              {{ end }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+{{ $stageSection := "" }}
+{{ with .Parent }}{{ $stageSection = .Section }}{{ end }}
+{{ $others := where (where site.RegularPages "Section" $stageSection) "Permalink" "ne" .Permalink }}
+{{ with $others }}
+<div class="wrap">
+  <section class="more-sec">
+    <h2>More from {{ $.Parent.Title }}</h2>
+    <div class="more-grid">
+      {{ range . }}
+      <a href="{{ .RelPermalink }}">{{ .Title }}<span class="arrow">&#8599;</span></a>
+      {{ end }}
+    </div>
+  </section>
+</div>
+{{ end }}
+
+{{ with .Params.cta }}
+<section class="cta-sec">
+  <div class="wrap">
+    <h2>{{ .title }}</h2>
+    <a class="btn" href="{{ .button_link | relLangURL }}">{{ .button_text }}</a>
+  </div>
+</section>
+{{ end }}
+
+{{ partial "poster-footer.html" . }}
+
+{{ end }}

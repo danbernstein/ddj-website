@@ -1,0 +1,825 @@
+
+:root {
+  /* org brand palette (from DDJ_Slides_Template.pptx) */
+  --paper: #F4F1ED;
+  --ink: #1C3450;
+  --blue: #14293D;
+  --red: #B4552A;
+  --yellow: #E3B7A2;
+  --green: #3E5670;
+  /* darker orange tint for button/input drop-shadows only -- --yellow reads too pale there */
+  --shadow-accent: #BE6C47;
+
+  /* section grounds — tinted from the palette, not neutral greys */
+  --band-quotes: #F2E9E2;
+  --band-services: #FAF9F7;
+  --band-process: #DEDEDD;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body.ddj {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Atkinson Hyperlegible', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 26px; }
+
+/* ---------- nav ---------- */
+.nav { display: flex; justify-content: space-between; align-items: baseline; padding: 26px 0 0; }
+.logo {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 20px;
+}
+.logo a { color: var(--ink); text-decoration: none; }
+.logo .dot { color: var(--red); }
+.nav-links { display: flex; gap: 24px; font-size: 15px; font-weight: 700; }
+.nav-links a { color: var(--ink); text-decoration: none; border-bottom: 2px solid transparent; }
+.nav-links a:hover { border-bottom-color: var(--yellow); }
+
+/* ---------- hero ---------- */
+.hero { padding: 64px 0 76px; position: relative; }
+.hero h1 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  font-size: clamp(40px, 6.4vw, 68px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  max-width: 18ch;
+}
+.hero h1 .shuffle-line { display: block; }
+.hero h1 .u { position: relative; white-space: nowrap; }
+.hero h1 .u svg {
+  position: absolute; left: -2%; bottom: -0.16em; width: 104%; height: 0.32em;
+  overflow: visible;
+}
+.hero h1 .word-blue { color: var(--blue); }
+
+/* ---------- hero org-type shuffle ---------- */
+.hero-shuffle-box {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: bottom;
+  overflow: hidden;
+  height: 1.05em;
+  min-width: 1ch;
+  transition: width .4s ease;
+}
+.hero-shuffle-word {
+  position: absolute; left: 0; top: 0;
+  color: var(--red);
+  white-space: nowrap;
+  opacity: 0; transform: translateY(55%);
+  transition: opacity .4s ease, transform .4s ease;
+}
+.hero-shuffle-word.is-active { opacity: 1; transform: translateY(0); }
+.hero-shuffle-word.is-leaving { opacity: 0; transform: translateY(-55%); }
+@media (prefers-reduced-motion: reduce) {
+  .hero-shuffle-word { transition: none; }
+}
+.hero .lede {
+  margin-top: 26px; font-size: 19px; max-width: 52ch;
+}
+.hero .lede b { font-weight: 700; }
+.cta-row { display: flex; align-items: center; gap: 22px; margin-top: 34px; flex-wrap: wrap; }
+.btn {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  background: var(--ink); color: var(--paper);
+  font-weight: 800; font-size: 16px;
+  padding: 14px 26px; border: none; cursor: pointer;
+  border-radius: 999px;
+  transform: rotate(-1deg);
+  box-shadow: 3px 3px 0 var(--shadow-accent);
+  transition: transform .12s ease;
+  display: inline-block; text-decoration: none;
+}
+.btn:hover { transform: rotate(-1deg) translate(-2px,-2px); box-shadow: 5px 5px 0 var(--shadow-accent); }
+
+/* ---------- sound familiar: speech bubbles ---------- */
+.builds {
+  padding: 84px 0 88px;
+  background: var(--band-quotes);
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+}
+.builds .h2row { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+
+.builds h2 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(30px, 4.5vw, 44px); letter-spacing: -0.02em;
+  text-transform: uppercase; line-height: 1.05;
+}
+.quote-wall {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 26px 22px; margin-top: 34px; align-items: start;
+}
+.bubble {
+  position: relative;
+  background: #fff;
+  border: 2.5px solid var(--ink);
+  padding: 16px 20px;
+  font-size: 16px; line-height: 1.45;
+  border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px;
+}
+.bubble::after {
+  content: '';
+  position: absolute; bottom: -13px; left: 34px;
+  width: 20px; height: 20px;
+  background: #fff;
+  border-right: 2.5px solid var(--ink);
+  border-bottom: 2.5px solid var(--ink);
+  transform: rotate(55deg) skew(20deg);
+}
+.bubble:nth-child(2n) { border-radius: 18px 255px 18px 225px / 255px 18px 225px 18px; }
+.bubble:nth-child(2n)::after { left: auto; right: 38px; transform: rotate(35deg) skew(-10deg); }
+.bubble:nth-child(1) { transform: rotate(-1.2deg); }
+.bubble:nth-child(2) { transform: rotate(0.8deg) translateY(14px); }
+.bubble:nth-child(3) { transform: rotate(-0.6deg) translateY(4px); }
+.bubble:nth-child(4) { transform: rotate(1deg) translateY(6px); }
+.bubble:nth-child(5) { transform: rotate(-1deg) translateY(18px); }
+.bubble:nth-child(6) { transform: rotate(0.7deg); }
+.bubble.hot { background: var(--yellow); }
+.bubble .who {
+  display: block; margin-top: 10px;
+  font-family: 'Bricolage Grotesque', sans-serif; font-size: 12.5px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--blue);
+}
+.bubble:nth-child(2n) .who { color: var(--red); }
+.bubble:nth-child(3n) .who { color: var(--green); }
+
+.list-sec h2, .about h2 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(30px, 4.5vw, 44px); letter-spacing: -0.02em;
+  text-transform: uppercase; line-height: 1.05;
+}
+
+/* ---------- services: advise / build / maintain ---------- */
+.services-sec {
+  padding: 84px 0 90px;
+  background: var(--band-services);
+  border-bottom: 3px solid var(--ink);
+}
+.services-sec h2, .services-sec .h2row h2 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(30px, 4.5vw, 44px); letter-spacing: -0.02em;
+  text-transform: uppercase; line-height: 1.05;
+}
+.services-sec .h2row { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }
+.services-sec > .wrap > .intro { margin-top: 10px; font-size: 18px; max-width: 56ch; }
+
+.service-groups { margin-top: 44px; display: flex; flex-direction: column; gap: 54px; }
+.service-group { position: relative; }
+.service-group-head {
+  display: grid; grid-template-columns: 74px 1fr; gap: 20px; align-items: start;
+}
+.service-group-num {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 38px;
+  line-height: 1; text-align: center;
+  color: var(--blue);
+}
+.service-group.g2 .service-group-num { color: var(--red); }
+.service-group.g3 .service-group-num { color: var(--green); }
+.service-group-title-row {
+  display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+}
+.service-group-title {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(22px, 3vw, 28px); text-transform: uppercase; letter-spacing: -0.01em;
+}
+.service-group-more {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 13.5px;
+  color: var(--blue); text-decoration: none; border-bottom: 2px solid var(--yellow);
+  white-space: nowrap;
+}
+.service-group-more:hover { color: var(--red); border-bottom-color: var(--red); }
+.service-group-desc { margin-top: 6px; font-size: 16px; max-width: 62ch; }
+
+.service-tags {
+  margin-top: 22px; margin-left: 94px;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+}
+.service-tag {
+  display: block; text-decoration: none; color: var(--ink);
+  background: var(--paper); border: 2.5px solid var(--ink); border-radius: 4px;
+  padding: 14px 16px; position: relative;
+  box-shadow: 4px 4px 0 rgba(28,52,80,0.14);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.service-tag:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 rgba(28,52,80,0.18); }
+.service-tag .stag-org {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 11.5px;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--blue); display: block; margin-bottom: 5px;
+}
+.service-group.g2 .service-tag .stag-org { color: var(--red); }
+.service-group.g3 .service-tag .stag-org { color: var(--green); }
+.service-tag .stag-title { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 14.5px; line-height: 1.3; }
+.service-tag .stag-arrow { position: absolute; top: 12px; right: 12px; font-size: 15px; opacity: .45; }
+
+@media (max-width: 620px) {
+  .service-group-head { grid-template-columns: 50px 1fr; }
+  .service-tags { margin-left: 66px; grid-template-columns: 1fr; }
+}
+
+/* ---------- capabilities as marker list ---------- */
+/* ---------- clients ---------- */
+.clients-sec {
+  padding: 76px 0 80px;
+  background: #ECD7CB; /* lighter tint of --yellow (brand peach), full strength read too loud as a solid fill */
+  border-bottom: 3px solid var(--ink);
+}
+.clients-sec h2 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(30px, 4.5vw, 44px); letter-spacing: -0.02em;
+  text-transform: uppercase; line-height: 1.05;
+}
+.clients-sec .intro { margin-top: 10px; font-size: 17px; max-width: 54ch; }
+.client-grid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2px 28px;
+}
+.client-grid a {
+  display: block;
+  color: var(--ink); text-decoration: none;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 600; font-size: 15.5px; line-height: 1.35;
+  padding: 9px 0;
+  border-bottom: 1.5px solid rgba(28,52,80,0.22);
+  transition: color .12s ease, padding-left .12s ease;
+}
+.client-grid a:hover { color: var(--red); padding-left: 6px; }
+
+.list-sec {
+  padding: 80px 0 84px; position: relative;
+  background: var(--band-process);
+}
+.list-sec .intro { margin-top: 10px; font-size: 18px; max-width: 50ch; }
+.cap-list { margin-top: 40px; }
+.cap-item {
+  display: grid; grid-template-columns: 78px 1fr; gap: 22px;
+  padding: 24px 6px;
+  border-bottom: 2.5px dashed rgba(28,52,80,0.28);
+  align-items: start;
+}
+.cap-item:first-child { border-top: 2.5px dashed rgba(28,52,80,0.28); }
+.cap-num {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 38px;
+  color: var(--red); line-height: 1; text-align: center;
+}
+.cap-item:nth-child(2) .cap-num { color: var(--blue); }
+.cap-item:nth-child(3) .cap-num { color: var(--green); }
+
+/* ---------- about strip ---------- */
+.about {
+  background: var(--blue); color: var(--paper);
+  padding: 72px 0;
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+}
+.about .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; }
+.about h2 { color: var(--paper); }
+.about p { margin-top: 16px; font-size: 17px; }
+
+/* ---------- team card ---------- */
+.team-card {
+  background: var(--paper); color: var(--ink);
+  border: 2.5px solid var(--ink); border-radius: 4px;
+  padding: 26px 24px 22px;
+  transform: rotate(1.2deg);
+  box-shadow: 6px 7px 0 rgba(28,52,80,0.28);
+  position: relative;
+}
+.team-card::before {
+  content: '';
+  position: absolute; top: -13px; left: 50%;
+  transform: translateX(-50%) rotate(-2.5deg);
+  width: 96px; height: 26px;
+  background: var(--yellow); opacity: .9; border-radius: 2px;
+  border: 2px solid rgba(28,52,80,0.25);
+}
+.team-photo {
+  width: 76px; height: 76px; border-radius: 50%;
+  border: 2.5px solid var(--ink); background: var(--blue); color: var(--paper);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 26px;
+  letter-spacing: 0.02em; margin-bottom: 14px;
+}
+.team-photo-img {
+  width: 76px; height: 76px; border-radius: 50%;
+  border: 2.5px solid var(--ink);
+  object-fit: cover; display: block; margin-bottom: 14px;
+}
+.team-name {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 22px; letter-spacing: -0.01em; line-height: 1.1;
+}
+.team-role {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 13.5px;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  color: var(--red); margin-top: 5px;
+}
+.team-bio { font-size: 14.5px; line-height: 1.5; margin-top: 12px; }
+.team-links { display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap; }
+.team-links a {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 14px;
+  color: var(--blue); text-decoration: none;
+  border-bottom: 2px solid var(--yellow); padding-bottom: 1px;
+}
+.team-links a:hover { color: var(--red); border-bottom-color: var(--red); }
+
+/* ---------- footer ---------- */
+.footer { padding: 34px 0 40px; }
+.footer .wrap { display: flex; justify-content: flex-start; align-items: flex-end; flex-wrap: wrap; gap: 26px; }
+.footer .loc {
+  font-size: 15px; opacity: .85;
+  display: flex; align-items: center; gap: 12px;
+}
+.footer .loc-text { font-weight: 700; letter-spacing: 0.01em; }
+.footer .va-icon {
+  width: 78px; height: auto; flex-shrink: 0;
+  transform: rotate(2deg);
+}
+.footer .va-icon path {
+  fill: rgba(227,183,162,0.35);
+  stroke: var(--blue);
+  stroke-width: 3;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 900px) {
+  .quote-wall { grid-template-columns: 1fr 1fr; }
+  .about .wrap { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .quote-wall { grid-template-columns: 1fr; }
+  .bubble { transform: rotate(0) !important; }
+  .cap-item { grid-template-columns: 54px 1fr; }
+  .team-card { transform: rotate(0); }
+}
+
+
+/* ============ service detail pages ============ */
+/* ---------- page header ---------- */
+.page-head { padding: 54px 0 60px; }
+.crumb {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 13.5px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 18px;
+}
+.crumb a { color: var(--blue); text-decoration: none; border-bottom: 2px solid var(--yellow); }
+.crumb a:hover { color: var(--red); border-bottom-color: var(--red); }
+.crumb .sep { opacity: .4; margin: 0 8px; }
+.page-head h1 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(36px, 5.6vw, 60px); line-height: 1.04;
+  letter-spacing: -0.025em; text-transform: uppercase; max-width: 16ch;
+}
+.page-head .standfirst {
+  margin-top: 20px; font-size: 19px; max-width: 56ch;
+}
+.page-head .standfirst b { font-weight: 700; }
+
+/* the "some call us data wizards" tag on service pages */
+.stage-tag {
+  display: inline-flex; align-items: center; gap: 9px;
+  margin-top: 26px;
+  background: var(--yellow); border: 2.5px solid var(--ink);
+  border-radius: 999px; padding: 6px 17px 6px 12px;
+  transform: rotate(-1deg);
+  box-shadow: 3px 3px 0 rgba(28,52,80,0.2);
+}
+.stage-tag .wizard-hat { width: 22px; height: 22px; flex-shrink: 0; }
+.stage-tag .t {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 13.5px; text-transform: uppercase; letter-spacing: 0.04em;
+}
+
+/* ---------- case studies ---------- */
+.cases-sec {
+  background: var(--band-services);
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  padding: 72px 0 80px;
+}
+.cases-sec > .wrap > h2 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.02em;
+  text-transform: uppercase; line-height: 1.05;
+}
+.cases-sec .sec-intro { margin-top: 8px; font-size: 16.5px; max-width: 54ch; }
+
+.case-list { margin-top: 38px; display: flex; flex-direction: column; gap: 20px; }
+
+.case {
+  background: var(--paper);
+  border: 2.5px solid var(--ink); border-radius: 4px;
+  box-shadow: 5px 6px 0 rgba(28,52,80,0.16);
+  overflow: hidden;
+}
+.case-head {
+  width: 100%; text-align: left; cursor: pointer;
+  background: none; border: none;
+  display: grid; grid-template-columns: 54px 1fr 34px; gap: 16px;
+  align-items: center;
+  padding: 20px 22px;
+  font-family: inherit;
+}
+.case-head:hover .case-title { color: var(--blue); }
+.case-head:focus-visible { outline: 3px solid var(--blue); outline-offset: -3px; }
+.case-num {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 30px;
+  line-height: 1; text-align: center; color: var(--blue);
+}
+.case:nth-child(2) .case-num { color: var(--red); }
+.case:nth-child(3) .case-num { color: var(--green); }
+.case-title {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 19px; line-height: 1.22; transition: color .12s ease;
+}
+.case-toggle {
+  width: 30px; height: 30px; border-radius: 50%;
+  border: 2.5px solid var(--ink); background: var(--paper);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 19px;
+  line-height: 1; flex-shrink: 0;
+  transition: background .12s ease, transform .2s ease;
+}
+.case.is-open .case-toggle { background: var(--yellow); transform: rotate(135deg); }
+
+.case-body { display: none; padding: 0 22px 24px 92px; }
+.case.is-open .case-body { display: block; }
+/* Without JS nothing can be toggled, so show every case and hide the control. */
+html.no-js .case-body { display: block; }
+html.no-js .case-toggle { display: none; }
+
+/* Single case-study page: no accordion head, so the body isn't indented under one. */
+.case.single-case .case-body { padding: 22px; }
+
+/* Stage index page: same tag styling as service tags, without the numbered-group indent. */
+.stage-index-tags { margin-left: 0; grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 620px) {
+  .stage-index-tags { grid-template-columns: 1fr; }
+}
+
+.case-block + .case-block { margin-top: 22px; }
+.block-label {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.07em;
+  color: var(--red); margin-bottom: 7px;
+}
+.case-block.solution .block-label { color: var(--blue); }
+.case-block.results .block-label { color: var(--green); }
+
+.challenge-text {
+  font-size: 16px; line-height: 1.55;
+  border-left: 3.5px solid var(--red); padding-left: 15px;
+}
+
+/* solution: numbered steps, they're genuinely sequential */
+.solution-steps { list-style: none; counter-reset: step; }
+.solution-steps li {
+  counter-increment: step;
+  position: relative; padding-left: 34px;
+  font-size: 15.5px; line-height: 1.5;
+}
+.solution-steps li + li { margin-top: 9px; }
+.solution-steps li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: 0.05em;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--blue); color: var(--paper);
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 12px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* results: the payoff, so give it a filled ground */
+.results-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.results-list li {
+  background: rgba(30,158,106,0.1);
+  border-left: 3.5px solid var(--green);
+  padding: 9px 13px; font-size: 15.5px; line-height: 1.45;
+  font-weight: 700;
+}
+
+.tech-stack {
+  margin-top: 20px; padding-top: 15px;
+  border-top: 2px dashed rgba(28,52,80,0.25);
+  font-size: 14.5px;
+}
+.tech-stack .block-label { color: var(--ink); opacity: .6; }
+.tech-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.tech-chip {
+  background: var(--band-process); border: 2px solid rgba(28,52,80,0.35);
+  border-radius: 3px; padding: 3px 9px;
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 13px;
+}
+
+/* ---------- other services ---------- */
+.more-sec { padding: 70px 0 20px; }
+.more-sec h2 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(24px, 3.4vw, 32px); letter-spacing: -0.02em;
+  text-transform: uppercase; margin-bottom: 24px;
+}
+.more-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.more-grid a {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  background: var(--paper); color: var(--ink); text-decoration: none;
+  border: 2.5px solid var(--ink); border-radius: 4px;
+  padding: 15px 17px;
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 15px;
+  box-shadow: 4px 4px 0 rgba(28,52,80,0.14);
+  transition: transform .12s ease, box-shadow .12s ease, color .12s ease;
+}
+.more-grid a:hover {
+  transform: translate(-2px,-2px); box-shadow: 6px 6px 0 rgba(28,52,80,0.18);
+  color: var(--blue);
+}
+.more-grid .arrow { opacity: .45; flex-shrink: 0; }
+
+/* ---------- cta ---------- */
+.cta-sec {
+  background: var(--blue); color: var(--paper);
+  border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink);
+  padding: 62px 0; margin-top: 70px;
+}
+.cta-sec .wrap { display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; }
+.cta-sec h2 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(26px, 3.6vw, 38px); letter-spacing: -0.02em;
+  text-transform: uppercase; line-height: 1.06; max-width: 18ch;
+}
+.cta-sec .btn {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  background: var(--paper); color: var(--blue);
+  font-weight: 800; font-size: 16px;
+  padding: 14px 26px; border: 2.5px solid var(--paper);
+  border-radius: 999px; cursor: pointer;
+  transform: rotate(-1deg);
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.25);
+  display: inline-block; text-decoration: none; white-space: nowrap;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.cta-sec .btn:hover { transform: rotate(-1deg) translate(-2px,-2px); box-shadow: 6px 6px 0 rgba(0,0,0,0.25); }
+
+@media (max-width: 820px) {
+  .more-grid { grid-template-columns: 1fr; }
+  .case-body { padding-left: 22px; }
+  .case-head { grid-template-columns: 40px 1fr 30px; gap: 12px; }
+  .case-num { font-size: 32px; }
+}
+
+/* ============ contact ============ */
+.contact-sec {
+  background: var(--band-services);
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  padding: 70px 0 78px;
+}
+.contact-grid {
+  display: grid; grid-template-columns: 1.35fr 0.65fr; gap: 44px;
+  align-items: start;
+}
+
+/* --- the form --- */
+.contact-form-card {
+  background: var(--paper);
+  border: 2.5px solid var(--ink); border-radius: 4px;
+  box-shadow: 6px 7px 0 rgba(28,52,80,0.16);
+  padding: 30px 30px 32px;
+}
+.contact-form-card h2 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(24px, 3.2vw, 32px); letter-spacing: -0.02em;
+  text-transform: uppercase; line-height: 1.06;
+}
+.contact-form-card .form-sub { margin-top: 8px; font-size: 16px; max-width: 46ch; }
+
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.field { margin-top: 20px; display: flex; flex-direction: column; }
+.field-row .field { margin-top: 0; }
+.field-row { margin-top: 24px; }
+.field label {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+.field input,
+.field textarea {
+  font-family: inherit; font-size: 16px; color: var(--ink);
+  background: #fff;
+  border: 2.5px solid var(--ink); border-radius: 3px;
+  padding: 11px 13px;
+  width: 100%;
+  transition: box-shadow .12s ease, border-color .12s ease;
+}
+.field textarea { resize: vertical; min-height: 110px; line-height: 1.5; }
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 3px 3px 0 var(--shadow-accent);
+}
+.contact-form-card .btn { margin-top: 26px; }
+
+/* --- side column --- */
+.contact-side { display: flex; flex-direction: column; gap: 30px; padding-top: 6px; }
+.side-block .block-label {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.07em;
+  color: var(--red); margin-bottom: 9px;
+}
+.email-direct {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700;
+  font-size: 16px; color: var(--blue); text-decoration: none;
+  border-bottom: 2px solid var(--yellow); word-break: break-all;
+}
+.email-direct:hover { color: var(--red); border-bottom-color: var(--red); }
+
+.social-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.social-list a {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 15px;
+  color: var(--ink); text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.social-list a:hover { color: var(--blue); border-bottom-color: var(--yellow); }
+
+.response-time { font-size: 14.5px; line-height: 1.5; font-weight: 700; }
+
+.sent-head { padding-bottom: 90px; }
+
+@media (max-width: 860px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (max-width: 560px) {
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+  .field-row .field + .field { margin-top: 20px; }
+  .contact-form-card { padding: 24px 20px 26px; }
+}
+
+/* ============ about: long-form prose ============ */
+.prose-sec {
+  background: var(--band-services);
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  padding: 66px 0 72px;
+}
+.prose-sec .wrap { display: flex; flex-direction: column; gap: 46px; }
+.prose-block { display: grid; grid-template-columns: 1fr; gap: 14px; max-width: 68ch; }
+.prose-block h2 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(22px, 3vw, 30px); letter-spacing: -0.02em;
+  text-transform: uppercase; line-height: 1.08;
+}
+.prose-body p { font-size: 16.5px; line-height: 1.62; max-width: 66ch; }
+.prose-body p + p { margin-top: 14px; }
+
+/* ============ about: background timeline ============ */
+.bg-sec { padding: 70px 0 20px; }
+.bg-sec h2 {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: clamp(24px, 3.4vw, 32px); letter-spacing: -0.02em;
+  text-transform: uppercase; margin-bottom: 26px;
+}
+.bg-list { list-style: none; }
+.bg-item {
+  display: grid; grid-template-columns: 168px 1fr; gap: 22px;
+  padding: 20px 4px;
+  border-top: 2.5px dashed rgba(28,52,80,0.28);
+  align-items: start;
+}
+.bg-item:last-child { border-bottom: 2.5px dashed rgba(28,52,80,0.28); }
+.bg-period {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 14px;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--blue); line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+}
+.bg-item:nth-child(2n) .bg-period { color: var(--red); }
+.bg-item:nth-child(3n) .bg-period { color: var(--green); }
+.bg-role {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 17px; line-height: 1.25;
+}
+.bg-detail { margin-top: 5px; font-size: 15px; line-height: 1.5; max-width: 64ch; }
+
+/* ============ project / client work ============ */
+.work-sec {
+  background: var(--band-quotes);
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  padding: 60px 0 72px;
+}
+.work-count {
+  font-family: 'Bricolage Grotesque', sans-serif; font-size: 14px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--red); margin-bottom: 26px;
+}
+.work-list { display: flex; flex-direction: column; }
+.work-item {
+  display: grid; grid-template-columns: 62px 1fr; gap: 20px;
+  padding: 22px 4px;
+  border-top: 2.5px solid rgba(28,52,80,0.18);
+  align-items: start;
+}
+.work-item:last-child { border-bottom: 2.5px solid rgba(28,52,80,0.18); }
+.work-num {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 15px; color: var(--ink); opacity: .38;
+  font-variant-numeric: tabular-nums; padding-top: 3px;
+}
+.work-title {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 19px; line-height: 1.22;
+}
+.work-title a { color: var(--ink); text-decoration: none; }
+.work-title a:hover { color: var(--blue); }
+.work-arrow { opacity: .4; font-size: 15px; }
+.work-body { margin-top: 7px; font-size: 15.5px; line-height: 1.52; max-width: 72ch; }
+.work-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 11px; }
+.work-tag {
+  background: rgba(20,41,61,0.08);
+  border: 1.5px solid rgba(20,41,61,0.35);
+  color: var(--blue);
+  border-radius: 3px; padding: 2px 8px;
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 12px;
+}
+
+/* ============ talks ============ */
+.talks-sec {
+  background: var(--band-process);
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  padding: 60px 0 70px;
+}
+.talk-list { list-style: none; }
+.talk-item {
+  display: grid; grid-template-columns: 118px 1fr; gap: 22px;
+  padding: 22px 4px;
+  border-top: 2.5px solid rgba(28,52,80,0.18);
+  align-items: baseline;
+}
+.talk-item:last-child { border-bottom: 2.5px solid rgba(28,52,80,0.18); }
+.talk-date { display: flex; flex-direction: column; }
+.talk-year {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 20px; font-variant-numeric: tabular-nums;
+}
+.talk-day {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 13px;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--red);
+}
+.talk-title {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800;
+  font-size: 20px; line-height: 1.22;
+}
+.talk-title a { color: var(--ink); text-decoration: none; border-bottom: 2.5px solid transparent; }
+.talk-title a:hover { color: var(--blue); border-bottom-color: var(--yellow); }
+.talk-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.talk-tags.inline { display: inline-flex; margin-top: 0; }
+.talk-tag {
+  background: var(--paper);
+  border: 1.5px solid rgba(28,52,80,0.4);
+  border-radius: 3px; padding: 2px 8px;
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 12px;
+}
+.talk-meta {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  margin-top: 14px;
+}
+.talk-meta-date {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700;
+  font-size: 14px; opacity: .7;
+}
+
+/* single talk: slide embed */
+.talk-body-sec { padding: 46px 0 20px; }
+.slides-frame {
+  border: 2.5px solid var(--ink); border-radius: 4px;
+  box-shadow: 6px 7px 0 rgba(28,52,80,0.16);
+  background: var(--paper);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+.slides-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+.slides-fallback { margin-top: 14px; font-size: 15px; }
+.slides-fallback a { color: var(--blue); font-weight: 700; }
+.talk-content { max-width: 70ch; }
+.talk-content p + p { margin-top: 14px; }
+
+@media (max-width: 700px) {
+  .bg-item { grid-template-columns: 1fr; gap: 6px; }
+  .work-item { grid-template-columns: 40px 1fr; gap: 14px; }
+  .talk-item { grid-template-columns: 1fr; gap: 8px; }
+  .talk-date { flex-direction: row; gap: 10px; align-items: baseline; }
+  .slides-frame { aspect-ratio: 3 / 4; }
+}
+
+/* 404 quick links */
+.more-grid.four-oh-four { margin-top: 34px; max-width: 620px; }
