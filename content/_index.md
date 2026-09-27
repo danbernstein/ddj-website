@@ -6,15 +6,11 @@ layout: "home"
 
 ############################### Nav ##############################
 nav:
-  - name: "Services"
-    url: "/what-we-do/"
   - name: "Work"
     url: "/project/"
-  - name: "Talks"
-    url: "/talks/"
   - name: "About"
     url: "/about/"
-  - name: "Say hi"
+  - name: "Get in touch"
     url: "/contact/"
 
 ############################### Hero ##############################
@@ -41,28 +37,28 @@ quotes:
   enable: true
   title: "Sound familiar?"
   items:
-    - quote: "Our intake process is held together with tape and one heroic paralegal."
-      who: "— every legal aid ED"
-    - quote: "The grant report is due Friday and I can't get the numbers out."
-      who: "— development director"
-    - quote: "We type the same letter forty times a week."
-      who: "— staff attorney"
-    - quote: "Our systems don't talk to each other. At all."
-      who: "— operations manager"
-    - quote: "We have more cases than people to read them."
-      who: "— screening team"
-    - quote: "Everyone says use AI. Nobody says where to start."
+    - quote: "We don't know what's going wrong and the only guy who knew left."
       who: "— executive director"
+    - quote: "The grant report is due Friday and I can't get the numbers to match up."
+      who: "— development director"
+    - quote: "We type the same letter several times per week; there's got to be a better way."
+      who: "— staff attorney"
+    - quote: "Our systems don't talk to each other and its hard to know what's true."
+      who: "— operations manager"
+    - quote: "We have more cases than time to read them."
+      who: "— screening team"
+    - quote: "Everyone says use AI but we don't know where to start."
+      who: "— everyone"
 
 ############################# Services #############################
 services:
   enable: true
   title: "What we do"
-  intro: "Not every organization needs the same thing. Some need a second set of eyes, some need something built, some need a team they can call after launch. Here's how the work breaks down — click a project to read the full case study."
+  intro: "Not every organization needs the same thing. Some need a fresh set of eyes, some need a new tool built, some need a team they can call when something goes wrong. Here's how we think about our work."
   groups:
     - num: "1"
       title: "Advise"
-      description: "Process mapping, data assessments, and system evaluations — figuring out what's actually wrong before anything gets built."
+      description: "Figuring out what's actually wrong before anything gets built through process mapping, data assessments, and system evaluations."
       cases:
         - org: "Legal aid, multi-office"
           title: "Legal Services Intake Pathway Redesign"
@@ -78,7 +74,7 @@ services:
           link: "/what-we-do/analytics/"
     - num: "2"
       title: "Build"
-      description: "Custom software, automation, AI tools, and data infrastructure — shipped to production, not left as a slide deck."
+      description: "Work alongside staff to build, test, and refine software, automation, and data analysis that helps you spend more time on supporting clients."
       cases:
         - org: "Innocence project"
           title: "AI-Assisted Evidence Synthesis for Case Screening"
@@ -94,7 +90,7 @@ services:
           link: "/what-we-do/automation/"
     - num: "3"
       title: "Maintain"
-      description: "Training, documentation, and fractional support so your team can run what we built — long after the project ends."
+      description: "Training, documentation, and fractional support so your team can maintain what we build with minimal technical assistance."
       cases:
         - org: "Social service nonprofit"
           title: "Upskilling a Non-Profit Data Team"
@@ -107,7 +103,7 @@ services:
 clients:
   enable: true
   title: "Who we've worked with"
-  intro: "Legal aid providers, innocence projects, housing organizations, courts, foundations, and government agencies."
+  intro: "Legal aid providers, innocence projects, housing organizations, grassroots organizers, and government agencies."
   # Ordered by recognition, then loosely by sector.
   items:
     - name: "American Civil Liberties Union (ACLU)"
@@ -151,11 +147,15 @@ clients:
     - name: "Root Change"
       link: "https://rootchange.org/"
     - name: "Interamerican Development Bank"
-      link: "http://idbg.org/"
+      link: "https://www.iadb.org/en"
     - name: "New Editions"
       link: "https://www.neweditions.net/"
     - name: "Saint Anselm's College"
       link: "https://www.anselm.edu/"
+    - name: "Coloradans for Real Safety Solutions"
+      link: "https://noon132.com/counties"
+    - name: "Legal Services Corporation"
+      link: "https://www.lsc.gov/"
 
 ############################ How it works ###########################
 process:
@@ -180,11 +180,11 @@ team:
   description: "We bring in data analysts, design strategists, and researchers as needed — capable of helping with anything you need."
   members:
     - name: "Dan Bernstein"
-      role: "Founder · Data & Software"
+      role: "Co-Founder & Principal"
       # resolved through Hugo's asset pipeline from assets/
       photo: "images/dan-bernstein.jpg"
       initials: "DB"
-      bio: "Eight years building data systems for civil justice. Engineering lead on the Legal Services Corporation's Civil Court Data Initiative, scraping and standardizing civil court records from fifty-plus sources. Before that, technical assistance to nonprofits at the Patrick J. McGovern Foundation. Since 2021, independent work with innocence projects, legal aid providers, and housing organizations."
+      bio: "Eight years building data systems for civil justice. Engineering lead on the Legal Services Corporation's Civil Court Data Initiative, scraping and standardizing civil court records from fifty-plus sources. Also provided technical assistance to nonprofits at the Patrick J. McGovern Foundation. Since 2021, independent work with legal aid providers, social service nonprofits, and housing organizations."
       links:
         - label: "LinkedIn"
           url: "https://www.linkedin.com/in/danbernstein94/"
