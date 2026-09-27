@@ -6,8 +6,6 @@ layout: "home"
 
 ############################### Nav ##############################
 nav:
-  - name: "About"
-    url: "/about/"
   - name: "Get in touch"
     url: "/contact/"
 
@@ -24,7 +22,7 @@ hero:
     - "eviction defense attorneys"
     - "courts"
     - "policy researchers"
-  lede: "Custom software, automation, AI tools, data analysis f"
+  lede: "Custom software, automation, AI tools, data analysis for nonprofits."
   lede_emphasis: "We build the stuff that your staff actually want to use."
   button:
     label: "Start a conversation"
@@ -41,8 +39,8 @@ quotes:
       who: "— development director"
     - quote: "We type the same letter several times per week; there's got to be a better way."
       who: "— staff attorney"
-    - quote: "Our systems don't talk to each other and its hard to know what's true."
-      who: "— operations manager"
+    - quote: "Our systems don't talk to each other and clients are slipping through the cracks."
+      who: "— intake staff"
     - quote: "We have more cases than time to read them."
       who: "— screening team"
     - quote: "Everyone says use AI but we don't know where to start."

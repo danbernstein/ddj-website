@@ -134,9 +134,6 @@ menus:
     - name: "Home"
       url: "/"
       weight: 1
-    - name: "About"
-      url: "about/"
-      weight: 2
     - name: "Get in touch"
       url: "contact/"
-      weight: 3
+      weight: 2
