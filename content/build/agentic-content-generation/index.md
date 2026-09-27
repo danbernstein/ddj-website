@@ -1,5 +1,5 @@
 ---
-title: "Agentic Content Generation System for International Development Nonprofit"
+title: "AI Agent for Internal Knowledge Retrieval"
 description: "Replacing a memoryless chatbot with an agent that decides how to answer instead of guessing."
 draft: false
 type: "poster"

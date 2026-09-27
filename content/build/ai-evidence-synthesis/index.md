@@ -1,5 +1,5 @@
 ---
-title: "Criminal Case Screening with AI-Assisted Evidence Synthesis"
+title: "AI-Assisted Evidence Synthesis"
 description: "An AI screening pipeline that gives attorneys structured findings to judge, not a black-box verdict."
 draft: false
 type: "poster"
@@ -17,6 +17,8 @@ solution:
   - "Created AI-generated preliminary screening memos to summarize across volunteer reviews with flagged inconsistencies and potential leads"
   - "Designed attorney review interface to accept/reject AI findings and add judgment-based notes"
   - "Integrated new tools with internal data collection forms to minimize manual data entry"
+results:
+  - text: "Reduced time to review pro bono work product by several hours per case"
 technologies: "Claude API, Clio, agentic workflows, document processing"
 
 cta:

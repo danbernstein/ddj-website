@@ -25,11 +25,11 @@ solution:
   - "Assessed the impact of prior policy changes and internal referral patterns to quantify centralization opportunities"
   - "Turned the findings into staff-facing reports and concrete recommendations for triage and staffing alignment"
 results:
-  - text: "Confirmed intake data was reliable enough to build on—no system replacement needed"
+  - text: "Confirmed intake data was reliable enough to build on"
   - text: "Revealed which case types drove disproportionate staff time, and quantified it"
   - text: "Gave leadership evidence-based grounds for centralization and staffing decisions"
   - text: "Clarified intake decision criteria, cutting downstream follow-up work"
-technologies: "LegalServer data audit, SQL analysis, Vonage call data, structured interviews, workflow mapping, historical policy impact assessment"
+technologies: "LegalServer data, Vonage call data, structured interviews, workflow mapping, historical data analysis"
 
 cta:
   title: "Map Your Operations. Find Your Leverage Points."

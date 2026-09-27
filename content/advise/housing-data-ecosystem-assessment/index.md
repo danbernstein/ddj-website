@@ -1,5 +1,5 @@
 ---
-title: "State Homeless Services Data Ecosystem Assessment & Vision"
+title: "Homeless Services CRM Assessment"
 description: "A $500K platform decision, grounded in 46 stakeholder interviews instead of vendor pressure."
 draft: false
 type: "poster"
@@ -10,7 +10,7 @@ stage:
   name: "Advise"
 
 org: "State housing agency"
-challenge: "Connecticut Department of Housing managed a state-wide Homelessness Management Information System (HMIS) used by 24+ service providers. The system wasn't meeting user needs. Providers had implemented Smartsheet workarounds to fill gaps, creating duplicate data entry. Poor visibility into client flow created bottlenecks. State lacked clear picture of service reach and equity gaps. Leadership didn't know whether to modify current system, revert to vendor defaults, or rebid the platform."
+challenge: "A statewide Department of Housing managed a state-wide Homelessness Management Information System (HMIS) used by 24+ service providers. The system wasn't meeting user needs. Providers had implemented Smartsheet workarounds to fill gaps, creating duplicate data entry. Poor visibility into client flow created bottlenecks. State lacked clear picture of service reach and equity gaps. Leadership didn't know whether to modify current system, revert to vendor defaults, or rebid the platform."
 solution:
   - "Conducted 28 structured interviews with 46 stakeholders across providers to understand actual workflows and pain points"
   - "Developed personas for outreach workers, case managers, and coordinators to understand actual workflows"

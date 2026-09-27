@@ -1,5 +1,5 @@
 ---
-title: "Criminal Case Management Workflow Integration"
+title: "Custom CRM Development for Innocence Work"
 description: "Integrating Clio, Trello, and a WordPress intake system so 500+ volunteers stopped syncing data by hand."
 draft: false
 type: "poster"
@@ -20,7 +20,6 @@ solution:
   - "Brought systems in-house rather than relying on external vendors to enable ongoing customization"
 results:
   - text: "Eliminated manual data syncing between Clio, Trello, and intake system"
-  - text: "Reduced time for case intake and volunteer assignment from days to hours"
   - text: "Improved volunteer engagement through clearer task visibility and communication"
   - text: "Staff visibility into full caseload status enabled better capacity planning"
 technologies: "Clio, Trello, Zapier, WordPress, custom code (Python, JavaScript), process mapping"

@@ -22,7 +22,7 @@ hero:
     - "eviction defense attorneys"
     - "courts"
     - "policy researchers"
-  lede: "Custom software, automation, AI tools, data analysis for nonprofits."
+  #lede: "Custom system design, technology, and data analysis for nonprofits."
   lede_emphasis: "We build the stuff that your staff actually want to use."
   button:
     label: "Start a conversation"

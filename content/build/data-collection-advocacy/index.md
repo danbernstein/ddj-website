@@ -15,6 +15,8 @@ solution:
   - "Developed webscraping software to collect upcoming case and hearing information"
   - "Developed software to systematically identify all housing code enforcement issues in recent years and compile details about each violation"
   - "Combined eviction and code enforcement data with rental registry data to identify which landlords are using eviction to sidestep improving housing conditions"
+results:
+  - text: "Developed an interactive map for identifying landlords with systemic eviction and code enforcement violation practices statewide"
 technologies: "Custom code (Python)"
 
 cta:
