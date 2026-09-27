@@ -57,7 +57,10 @@
         <div class="service-group-head">
           <div class="service-group-num">{{ $g.num }}</div>
           <div>
-            <div class="service-group-title">{{ $g.title }}</div>
+            <div class="service-group-title-row">
+              <div class="service-group-title">{{ $g.title }}</div>
+              {{ with $g.link }}<a class="service-group-more" href="{{ . | relLangURL }}">See all &#8599;</a>{{ end }}
+            </div>
             <p class="service-group-desc">{{ $g.description }}</p>
           </div>
         </div>

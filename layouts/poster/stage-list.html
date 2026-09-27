@@ -1,0 +1,51 @@
+{{ define "main" }}
+
+<div class="wrap">
+  {{ partial "poster-nav.html" . }}
+
+  <header class="page-head">
+    <div class="crumb">
+      <a href="{{ "/" | relLangURL }}">Home</a>
+    </div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.description }}<p class="standfirst">{{ . }}</p>{{ end }}
+    {{ with .Params.stage }}
+    <div class="stage-tag" data-stage="{{ .num }}">
+      <span class="n">{{ .num }}</span>
+      <span class="t">{{ .name }}</span>
+    </div>
+    {{ end }}
+  </header>
+</div>
+
+<section class="cases-sec">
+  <div class="wrap">
+    <h2>Case studies</h2>
+    <div class="service-tags stage-index-tags">
+      {{ range .RegularPages.ByTitle }}
+      <a class="service-tag" href="{{ .RelPermalink }}">
+        {{ with .Params.org }}<span class="stag-org">{{ . }}</span>{{ end }}
+        <span class="stag-title">{{ .Title }}</span>
+        <span class="stag-arrow">&#8599;</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="more-sec">
+    <h2>Other stages</h2>
+    <div class="more-grid">
+      {{ range site.Sections }}
+      {{ if and (in (slice "advise" "build" "maintain") .Section) (ne .Permalink $.Permalink) }}
+      <a href="{{ .RelPermalink }}">{{ .Title }}<span class="arrow">&#8599;</span></a>
+      {{ end }}
+      {{ end }}
+    </div>
+  </section>
+</div>
+
+{{ partial "poster-footer.html" . }}
+
+{{ end }}

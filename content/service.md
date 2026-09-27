@@ -1,7 +1,7 @@
 ---
 title: "Our Services"
 description: "Comprehensive data and technology solutions for nonprofits and small businesses"
-# Superseded by the /what-we-do/ section; /service/ now redirects there.
+# Superseded by the Advise/Build/Maintain structure (/advise/, /build/, /maintain/).
 draft: true
 
 ################################## Service #####################################
