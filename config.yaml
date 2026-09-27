@@ -26,7 +26,6 @@ services:
 taxonomies:
   tag: "tags"
   category: "categories"
-  service: "services"
 
 ############################# Build ##############################
 build:
