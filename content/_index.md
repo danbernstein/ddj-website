@@ -6,8 +6,6 @@ layout: "home"
 
 ############################### Nav ##############################
 nav:
-  - name: "Work"
-    url: "/project/"
   - name: "About"
     url: "/about/"
   - name: "Get in touch"
